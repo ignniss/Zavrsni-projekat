@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+}
+nav{
+    border-bottom: 2px solid green;
+}
+
+#mainDiv{
+    background-color: grey;
+    width: 100%;
+    height: 76vh;
+    background-image: url("backgroundMain.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#footer{
+    color: green;
+    text-align: center;
+    height: 12vh;
+    border-top: 2px solid green;
+
+}
+h2{
+    line-height: 78px;
+}
+img{
+    width: 100%;
+}
+H1{
+    color: green;
+    text-align: center;
+    padding-top: 15%;
+    font: bold;
+    font-size: 60px;
+}
+
+
