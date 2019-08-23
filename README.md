@@ -1,1 +1,1 @@
-zavrsni-projekat.netlify.com
+https://zavrsni-projekat.netlify.com/
