@@ -1,0 +1,108 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+@font-face{
+    src: url(fonts/XXII\ STRAIGHT-ARMY.ttf);
+    font-family: army;
+}
+nav{
+    border-bottom: 2px solid green;
+    font-family: army;
+}
+#naslov{
+    margin-bottom: 20px;
+}
+
+#mainDiv{
+    background-color: grey;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+#footer{
+    color: green;
+    text-align: center;
+    height: 12vh;
+    border-top: 2px solid green;
+    font-family: army;
+}
+
+h2{
+    line-height: 78px;
+}
+img{
+    width: 100%;
+}
+H1{
+    color: green;
+    text-align: center;
+    padding-top: 2%;
+    font: bold;
+    font-family: army;
+}
+
+#struktura_casova{
+    border: 2px solid green;
+    box-shadow: 5px 5px  green;
+    border-radius: 25px;
+    padding-left: 25px;
+    padding-top: 10px;
+    float: left;
+    position: relative;
+    margin-bottom: 20px;
+    /* background-color: blue; */
+}
+#foto{
+    float: right;   
+    /* position: relative; */
+    margin-bottom: 20px;
+}
+#info{
+    float: left;
+    clear: left;
+    position: relative; 
+    padding: 0px;
+    margin-bottom: 20px;
+    
+}
+#plan_i_program{
+    border: 2px solid green;
+    box-shadow: 5px 5px  green;
+    border-radius: 25px;
+    padding-left: 25px;
+    padding-top: 10px;
+    float: left;
+    clear: left;
+    margin-bottom: 20px;
+
+}
+/* #kontejner{
+    position: relative;
+} */
+#dodatne_aktivnosti{
+    margin-left: 0px;
+    border: 2px solid green;
+    box-shadow: 5px 5px  green;
+    border-radius: 25px;
+    padding-left: 25px;
+    padding-top: 10px;
+    float: right;
+}
+#prednost_programa{
+    width: 100%;
+    float: left;
+    clear: both;
+    border: 2px solid green;
+    box-shadow: 5px 5px  green;
+    border-radius: 45px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-left: 25px;
+}
+
+
+
+
