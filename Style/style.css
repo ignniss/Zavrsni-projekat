@@ -10,6 +10,9 @@ nav{
     border-bottom: 2px solid green;
     font-family: army;
 }
+#logo{
+    width: 100px;
+}
 
 #mainDiv{
     background-color: grey;
@@ -43,6 +46,7 @@ H1{
 }
 
 /*login*/
+
 #mainDiv2{
     background-color: grey;
     width: 100%;
@@ -54,6 +58,11 @@ H1{
 }
 
 /*gallery*/
+
+
+
+
+/*about*/
 
 
 
