@@ -2,17 +2,20 @@
     margin: 0px;
     padding: 0px;
 }
-body{
+@font-face{
+    src: url(fonts/XXII\ STRAIGHT-ARMY.ttf);
+    font-family: army;
 }
 nav{
     border-bottom: 2px solid green;
+    font-family: army;
 }
 
 #mainDiv{
     background-color: grey;
     width: 100%;
     height: 76vh;
-    background-image: url("backgroundMain.jpg");
+    background-image: url("images/backgroundMain.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -24,7 +27,7 @@ nav{
     text-align: center;
     height: 12vh;
     border-top: 2px solid green;
-
+    font-family: army;
 }
 h2{
     line-height: 78px;
@@ -37,7 +40,8 @@ H1{
     text-align: center;
     padding-top: 15%;
     font: bold;
-    font-size: 60px;
+    font-size: 72px;
+    font-family: army;
 }
 
 
