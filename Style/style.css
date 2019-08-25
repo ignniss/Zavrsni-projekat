@@ -1,20 +1,24 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
-@font-face{
-    src: url(fonts/XXII\ STRAIGHT-ARMY.ttf);
-    font-family: army;
+
+@font-face {
+    src: url(fonts/XXII\ STRAIGHT-Arial, Helvetica, sans-serif.ttf);
+    font-family: Arial, Helvetica, sans-serif;
 }
-nav{
+
+nav {
     border-bottom: 2px solid green;
-    font-family: army;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
 }
-#logo{
+
+#logo {
     width: 100px;
 }
 
-#mainDiv{
+#mainDiv {
     background-color: grey;
     width: 100%;
     height: 76vh;
@@ -25,44 +29,79 @@ nav{
     background-size: cover;
     background-repeat: no-repeat;
 }
-#footer{
+
+#footer {
     color: green;
     text-align: center;
     height: 12vh;
     border-top: 2px solid green;
-    font-family: army;
+    font-family: Arial, Helvetica, sans-serif;
 }
-h2{
+
+h2 {
     line-height: 78px;
 }
 
-H1{
+H1 {
     color: green;
     text-align: center;
     padding-top: 15%;
     font: bold;
     font-size: 72px;
-    font-family: army;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 
 /*login*/
 
-#mainDiv2{
+#mainDiv2 {
     background-color: grey;
     width: 100%;
     height: 76vh;
     text-align: center;
 }
-#imgL{
+
+#imgL {
     height: 100%;
 }
 
+
 /*gallery*/
 
+#mainDiv3 {
+    background-color: grey;
+    width: 100%;
+    height: 76vh;
+    text-align: center;
+    padding-left: 30px;
+}
 
+#slicice {
+    padding-left: 0px;
+    overflow: scroll;
+    height: 100%;
+}
+
+#slika {
+    background-color: blue;
+    display: none;
+    height: 100%;
+}
+
+.gallery {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.gallery:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+#ser #eng {
+    cursor: pointer;
+    width: 20px;
+}
 
 
 /*about*/
-
-
-
