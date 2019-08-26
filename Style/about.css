@@ -1,0 +1,23 @@
+img {
+    width: 100px;
+}
+
+#gore,
+#sredina,
+#dole,
+#leviDole {
+    text-align: left;
+    border: solid green 2px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgb(23, 136, 136);
+}
+
+#mainDiv3 {
+    overflow: scroll;
+    background-color: grey;
+    width: 100%;
+    height: 76vh;
+    text-align: center;
+}

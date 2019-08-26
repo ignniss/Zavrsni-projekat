@@ -1,0 +1,35 @@
+#mainDiv3 {
+    background-color: grey;
+    width: 100%;
+    height: 76vh;
+    text-align: center;
+    padding-left: 30px;
+}
+
+#slicice {
+    padding-left: 0px;
+    overflow: scroll;
+    height: 100%;
+}
+
+#slika {
+    background-color: rgb(126, 126, 165);
+    display: none;
+    height: 100%;
+}
+
+#slika img {
+    box-sizing: border-box;
+}
+
+.gallery {
+    opacity: 0.4;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.gallery:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    transition: .5s;
+}

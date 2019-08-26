@@ -1,13 +1,3 @@
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-@font-face {
-    src: url(fonts/XXII\ STRAIGHT-Arial, Helvetica, sans-serif.ttf);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 nav {
     border-bottom: 2px solid green;
     font-family: Arial, Helvetica, sans-serif;
@@ -16,18 +6,6 @@ nav {
 
 #logo {
     width: 100px;
-}
-
-#mainDiv {
-    background-color: grey;
-    width: 100%;
-    height: 76vh;
-    background-image: url("../Img/backgroundMain.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 #footer {
@@ -42,66 +20,16 @@ h2 {
     line-height: 78px;
 }
 
-H1 {
-    color: green;
-    text-align: center;
-    padding-top: 15%;
-    font: bold;
-    font-size: 72px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-/*login*/
-
-#mainDiv2 {
-    background-color: grey;
-    width: 100%;
-    height: 76vh;
-    text-align: center;
-}
-
-#imgL {
-    height: 100%;
-}
-
-
-/*gallery*/
-
-#mainDiv3 {
-    background-color: grey;
-    width: 100%;
-    height: 76vh;
-    text-align: center;
-    padding-left: 30px;
-}
-
-#slicice {
-    padding-left: 0px;
-    overflow: scroll;
-    height: 100%;
-}
-
-#slika {
-    background-color: blue;
-    display: none;
-    height: 100%;
-}
-
-.gallery {
-    opacity: 0.4;
-    cursor: pointer;
-}
-
-.gallery:hover {
-    transform: scale(1.1);
-    opacity: 1;
-}
-
-#ser #eng {
+#ser,
+#uk {
     cursor: pointer;
     width: 20px;
 }
 
-
-/*about*/
+#mainDiv {
+    background-color: grey;
+    width: 100%;
+    height: 76vh;
+    text-align: center;
+    overflow: scroll;
+}

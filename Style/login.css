@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    src: url(fonts/XXII\ STRAIGHT-ARMY.ttf);
+    font-family: army;
+}
+
+img {
+    height: 100%;
+}
+
+#imgL {
+    height: 100%;
+}

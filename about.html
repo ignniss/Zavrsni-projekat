@@ -9,9 +9,9 @@
 
     <link rel="stylesheet" href="Style/bootstrap.css">
     <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/about.css">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -24,11 +24,11 @@
 <body>
     <nav id="navBar" class="navbar text-uppercase navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a style="color: green; font-size:30px; font-weight:bold;" class="navbar-brand" href="index.html">
-                ozon cross gym
-            </a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive">
+
+            <a class="navbar-brand text-success font-weight-bolder" href="index.html"><img id="logo" src="Img/logo.png" alt=""> ozon cross gym </a>
+
+
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -37,16 +37,16 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#">cross gym <br>training</a>
+                        <a class="nav-link" href="#">cross gym training</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">cross sport <br>kids</a>
+                        <a class="nav-link" href="#">cross sport kids</a>
                     </li>
                     <li class="nav-item">
-                        <a style="color: green; font-weight: bold" class="nav-link" href="about.html">about us</a>
+                        <a class="nav-link text-success" href="about.html">about us</a>
                     </li>
                     <li class="nav-item">
-                        <a   class="nav-link" href="gallery.html">gallery</a>
+                        <a class="nav-link " href="gallery.html" active>gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">contact us</a>
@@ -54,17 +54,72 @@
                     <li class="nav-item">
                         <a class="nav-link" href="login.html">login/register</a>
                     </li>
+                    <li class="nav-item">
+                        <img id="ser" src="Img/ser.png" alt="SER">
+                        <img id="uk" src="Img/uk.png" alt="ENG">
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <div id="mainDiv3">
-       
+        <div class="row">
+            <div class="col-md-6">
+
+                <div id="levi">
+                    <h3 class="font-weight-bolder">O NAMA</h3>
+                    <div id="leviDole"></div>
+
+                </div>
+
+            </div>
+
+            <div id="desni" class="desni col-md-6">
+                <h3 class="font-weight-bolder">NAŠI TRENERI:</h3>
+
+                <div class="row" id="gore">
+                    <div class="col-xl-2 col-md-12 col-sm-3 slika"> <img src="Img/trener1.png" alt="">
+                        <address><a href="mailto:trener1@ozon.com">imejl</a> </address>
+                    </div>
+
+                    <div class="col-xl-10 col-md-12 col-sm-9">
+                        <b>  Tренер 1</b> је особа која води, подучава и тренира спортисте или спортске клубове. Поред физичке и техничке припреме, тренер такође може да врши и психичку припрему спортиста у циљу што боље припреме истог за такмичења која
+                        му предстоје. Кад се ради о тимским спортовима, тренер, поред већ поменутих функција, врши и одабир стратегије коју ће тим применити у предстојећим утакмицама. Такође, тренер је задужен да посматра и проучава ривале и ривалске
+                        стратегије.
+                    </div>
+
+
+                </div>
+                <div class="row" id="sredina">
+                    <div class="col-xl-2 col-md-12 col-sm-3 slika"> <img src="Img/trener2.png" alt=""> </div>
+
+                    <div class="col-xl-10 col-md-12 col-sm-9">
+                        <b>  Tренер 2</b> је особа која води, подучава и тренира спортисте или спортске клубове. Поред физичке и техничке припреме, тренер такође може да врши и психичку припрему спортиста у циљу што боље припреме истог за такмичења која
+                        му предстоје. Кад се ради о тимским спортовима, тренер, поред већ поменутих функција, врши и одабир стратегије коју ће тим применити у предстојећим утакмицама. Такође, тренер је задужен да посматра и проучава ривале и ривалске
+                        стратегије.
+                    </div>
+                </div>
+                <div class="row" id="dole">
+                    <div class="col-xl-2 col-md-12 col-sm-3 slika"> <img src="Img/trener3.png" alt=""> </div>
+
+                    <div class="col-xl-10 col-md-12 col-sm-9">
+                        <b>  Tренер 3</b> је особа која води, подучава и тренира спортисте или спортске клубове. Поред физичке и техничке припреме, тренер такође може да врши и психичку припрему спортиста у циљу што боље припреме истог за такмичења која
+                        му предстоје. Кад се ради о тимским спортовима, тренер, поред већ поменутих функција, врши и одабир стратегије коју ће тим применити у предстојећим утакмицама. Такође, тренер је задужен да посматра и проучава ривале и ривалске
+                        стратегије.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
 
     </div>
 
-    <div id="footer" class="bg-dark">
+    <div id="footer" class="bg-dark ">
         <h2>REKLAME</h2>
     </div>
 

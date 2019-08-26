@@ -9,10 +9,11 @@
 
     <link rel="stylesheet" href="Style/bootstrap.css">
     <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/gallery.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="Javascript/script.js"></script>
+    <script src="Script/gallery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </body>
@@ -25,13 +26,9 @@
     <nav id="navBar" class="navbar text-uppercase navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
 
-            <a class="navbar-brand text-success font-weight-bolder" href="index.html"><img id="logo" src="Img/logo.jpg" alt=""> ozon cross gym </a>
+            <a class="navbar-brand text-success font-weight-bolder" href="index.html"><img id="logo" src="Img/logo.png" alt=""> ozon cross gym </a>
 
-            <!--
-            <a style="color: green; font-size:30px; font-weight:bold;" class="navbar-brand" href="index.html">
-                ozon cross gym
-            </a>
-            -->
+
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -50,7 +47,7 @@
                         <a class="nav-link" href="about.html">about us</a>
                     </li>
                     <li class="nav-item">
-                        <a style="color: green; font-weight: bold" class="nav-link" href="gallery.html">gallery</a>
+                        <a class="nav-link text-success" href="gallery.html" active>gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">contact us</a>
@@ -71,36 +68,37 @@
 
         <div id="slicice" class="col-md-4">
             <div class="row">
-                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" src="Gallery/1.jpg" alt="">
-                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" src="Gallery/2.jpg" alt="">
-                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" src="Gallery/3.jpg" alt="">
+                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" onclick="funkcija()" src="Gallery/1.jpg" alt="">
+                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" onclick="funkcija()" src="Gallery/2.jpg" alt="">
+                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" onclick="funkcija()" src="Gallery/3.jpg" alt="">
             </div>
             <div class="row">
-                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" src="Gallery/4.jpg" alt="">
-                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" src="Gallery/5.jpg" alt="">
-                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" src="Gallery/6.jpg" alt="">
+                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" onclick="funkcija()" src="Gallery/4.jpg" alt="">
+                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" onclick="funkcija()" src="Gallery/5.jpg" alt="">
+                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" onclick="funkcija()" src="Gallery/6.jpg" alt="">
             </div>
             <div class="row">
-                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" src="Gallery/7.jpg" alt="">
-                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" src="Gallery/8.jpg" alt="">
-                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" src="Gallery/9.jpg" alt="">
+                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" onclick="funkcija()" src="Gallery/7.jpg" alt="">
+                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" onclick="funkcija()" src="Gallery/8.jpg" alt="">
+                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" onclick="funkcija()" src="Gallery/9.jpg" alt="">
             </div>
             <div class="row">
-                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" src="Gallery/10.jpg" alt="">
-                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" src="Gallery/11.jpg" alt="">
-                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" src="Gallery/12.jpg" alt="">
+                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" onclick="funkcija()" src="Gallery/10.jpg" alt="">
+                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" onclick="funkcija()" src="Gallery/11.jpg" alt="">
+                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" onclick="funkcija()" src="Gallery/12.jpg" alt="">
             </div>
             <div class="row">
-                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" src="Gallery/13.jpg" alt="">
-                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" src="Gallery/14.jpg" alt="">
-                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" src="Gallery/15.jpg" alt="">
+                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" onclick="funkcija()" src="Gallery/13.jpg" alt="">
+                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" onclick="funkcija()" src="Gallery/14.jpg" alt="">
+                <img class="img-fluid col-md-4 mt-3 mb-3 gallery" onclick="funkcija()" src="Gallery/15.jpg" alt="">
             </div>
         </div>
 
         <div id="slika" class="col-md-8">
             <div class="row">
                 <div class="col-md-10">
-                    a
+
+
                 </div>
                 <div class="col-md-2">
                     <p>neki tekst</p>
