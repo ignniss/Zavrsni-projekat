@@ -3,24 +3,21 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
-@font-face {
-    src: url(fonts/XXII\ STRAIGHT-ARMY.ttf);
-    font-family: army;
+#main_div_kids{
+    background-color: grey;
+    width: 100%;
+    height: auto;
+    display: flex;
 }
-
 #naslov {
     margin-bottom: 20px;
 }
-
 img {
     width: 100%;
 }
-
 #img_kids1 {
     margin-bottom: 5px;
 }
-
 H1 {
     color: green;
     text-align: center;
@@ -28,25 +25,16 @@ H1 {
     font: bold;
     font-family: army;
 }
-
 #struktura_casova {
-    border: 2px solid green;
-    box-shadow: 5px 5px green;
-    border-radius: 25px;
-    padding-left: 25px;
-    padding-top: 10px;
     float: left;
     position: relative;
     margin-bottom: 20px;
-    /* background-color: blue; */
 }
-
 #foto {
     float: right;
     /* position: relative; */
     margin-bottom: 20px;
 }
-
 #info {
     float: left;
     clear: left;
@@ -54,41 +42,27 @@ H1 {
     padding: 0px;
     margin-bottom: 20px;
 }
-
 #plan_i_program {
-    border: 2px solid green;
-    box-shadow: 5px 5px green;
-    border-radius: 25px;
-    padding-left: 25px;
-    padding-top: 10px;
     float: left;
     clear: left;
     margin-bottom: 20px;
 }
-
-
-/* #kontejner{
-    position: relative;
-} */
-
 #dodatne_aktivnosti {
     margin-left: 0px;
-    border: 2px solid green;
-    box-shadow: 5px 5px green;
-    border-radius: 25px;
-    padding-left: 25px;
-    padding-top: 10px;
     float: right;
 }
-
 #prednost_programa {
     width: 100%;
     float: left;
     clear: both;
-    border: 2px solid green;
-    box-shadow: 5px 5px green;
-    border-radius: 45px;
     margin-bottom: 30px;
+}
+.borders{
+    border: 2px solid green;
+    box-shadow: 5px 5px 15px green;
+    border-radius: 25px;
+    background-color: rgb(23, 136, 136);
     padding-top: 10px;
     padding-left: 25px;
+    text-align: justify;
 }
