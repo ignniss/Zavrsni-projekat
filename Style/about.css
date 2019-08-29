@@ -21,3 +21,9 @@ img {
     height: 76vh;
     text-align: center;
 }
+
+.text {}
+
+img {
+    cursor: pointer;
+}
