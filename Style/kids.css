@@ -59,7 +59,7 @@ H1 {
 }
 .borders{
     border: 2px solid green;
-    box-shadow: 5px 5px 15px green;
+    box-shadow: 5px -5px green;
     border-radius: 25px;
     background-color: rgb(23, 136, 136);
     padding-top: 10px;

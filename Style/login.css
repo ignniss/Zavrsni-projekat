@@ -1,0 +1,39 @@
+.row div {    
+    margin-top: 3%;
+}
+.leva {
+    background-color: white;
+    height:auto;    
+}
+.desna {
+    background-color: grey;
+    height: auto;
+}
+#omotac{
+    margin-left:-15px;
+    margin-top:20px;
+    width: 50%;
+    height:auto;
+    background-color: grey;
+    border:3px solid darkslategrey;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+}
+h3{
+    color:white;
+    font-weight: 400;
+    padding: 10px;
+    text-align: center;
+    font-family:Tahoma;
+}
+.di {
+    width:80%;
+}
+#mainD{
+    width:100%;
+    background-image: url("../Img/slika2.jpg");
+    background-size: 100%;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-color: grey;
+}
