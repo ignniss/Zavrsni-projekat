@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="Style/bootstrap.css">
     <link rel="stylesheet" href="Style/style.css">
+    <link rel='stylesheet' href="Style/login.css">
 
 
 
@@ -16,8 +17,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    </body>
-
 
     <title>Login</title>
 </head>
@@ -64,22 +63,32 @@
         </div>
     </nav>
 
-    <div id="mainDiv">
-        <img id="imgL" src="https://cdn.dribbble.com/users/1404915/screenshots/3305531/blue-login-register-form.png" alt="">
+    <div id="mainD">
+        <div class="container">
+            <div class="row">
+            <div class="col-sm-12 col-md-7 leva">
+                <div id='omotac'><h3>PRIJAVI SE</h3></div>                
+                <input type="text" class="form-control border-success m-3 di" id="ime" name="ime" placeholder="Ime i prezime...">                
+                <input type="password" class="form-control border-success m-3 di" id="password" name="password" placeholder="Lozinka...">
+                <small id="passwordHelp" class="form-text text-muted m-3">Zaboravili ste lozinku? Kliknite <a href="#">ovde</a></small>
+                <button type="submit" class="btn btn-success m-3">PRIJAVI ME</button>
+            </div></div>
+            <div class="row">
+            <div class="col-sm-12 col-md-7 desna">
+                <h3>REGISTRUJ SE</h3>
+                <input type="text" class="form-control m-3 di" id="ime" name="ime" placeholder="Ime i prezime...">
+                <input type="email" class="form-control m-3 di" id="email" name="email" placeholder="Email...">                
+                <input type="password" class="form-control m-3 di" id="password" name="password" placeholder="Lozinka...">
+                <input type="password" class="form-control m-3 di" id="re_password" name="re_password" placeholder="Ponovljena lozinka...">
+                <button type="submit" class="btn btn-success m-3">REGISTRUJ ME</button>
+            </div></div>
+        </div>
 
     </div>
 
     <div id="footer" class="bg-dark">
         <h2>REKLAME</h2>
     </div>
-
-
-
-
-
-
-
-
 </body>
 
 </html>
