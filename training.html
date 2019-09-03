@@ -16,6 +16,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="Script/training.js"></script>
+
 
     <title>Cross gym trainings</title>
 </head>
@@ -38,7 +40,7 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-success" href="training.html">cross gym training</a>
+                        <a class="nav-link text-success" href="training.html">cross gym training</a>                       
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="cross_sport_kids.html">cross sport kids</a>
@@ -123,7 +125,7 @@
                     opuštanje i uspostavlja ravnotezu između fizičkog i mentalnog.
 
                 </p>
-                <a id="saznajVisePilates" class="saznajVise" href="#">Saznaj više o programu</a>
+                <a id="saznajVisePilates" class="saznajVise" href="#" >Saznaj više o programu</a>
             </div>
             <div id="treciDesno" class="col-sm-12 col-md-5 box">
                 <h3>Yoga</h3>
@@ -241,7 +243,9 @@
         <!-- Zumba -->
 
         <div class="container" id="kontejnerZumba">
-            <div style="text-align:left" id="slikaZumba" class="col-sm-12 col-md-5 box">
+
+            <!--klasa  box ili box1?! -->
+            <div style="text-align:left" id="slikaZumba" class="col-sm-12 col-md-5 box1">
                 <img src="https://topformplus.com/images/usluge/zumba_fitness.jpg" alt="">
                 <p>
                     <h5>PREPORUČUJE SE:</h5>
@@ -265,7 +269,8 @@
                 </p>
             </div>
 
-            <div id="infoZumba" class="col-sm-12 col-md-6 box">
+            <!--klasa  box ili box1?! -->
+            <div id="infoZumba" class="col-sm-12 col-md-6 box1">  
                 <p>
                     <p style="font-weight: bold;">Zaboravi na trening i dođi na žurku!</p>
 
@@ -366,65 +371,11 @@
     </div>
 
 
-        <!-- JS CODE -->
-    <script>
-
-        let saznajZumba = document.getElementById("saznajViseZumba");
-        let saznajPilates = document.getElementById("saznajVisePilates");
-        let saznajYoga = document.getElementById("saznajViseYoga");
-
-        let naslov = document.getElementById("naslov");
-        let mainDiv = document.getElementById("kontejner");
-        let zumbaDiv = document.getElementById("kontejnerZumba");
-        let pilatesDiv = document.getElementById("kontejnerPilates");
-        let yogaDiv = document.getElementById("kontejnerYoga");
-
-        let programiZumba = document.getElementById("programiZumba");
-        let programiPilates = document.getElementById("programiPilates");
-        let programiYoga = document.getElementById("programiYoga");
-
-
-        saznajPilates.addEventListener("click", () => {
-            mainDiv.setAttribute("style", "display:none");
-            pilatesDiv.setAttribute("style", "display:flex");
-            naslov.innerText = "Pilates";
-            naslov.setAttribute("style", "font-size:25px; font-weight:bold; text - transform: uppercase")
-        });
-
-        programiPilates.addEventListener("click", () => {
-            mainDiv.setAttribute("style", "display:flex;");
-            pilatesDiv.setAttribute("style", "display:none");
-        });
-
-        saznajZumba.addEventListener("click", () => {
-            mainDiv.setAttribute("style", "display:none");
-            zumbaDiv.setAttribute("style", "display:flex");
-            naslov.innerText = "Zumba";
-            naslov.setAttribute("style", "font-size:25px; font-weight:bold; text - transform: uppercase")
-        });
-
-        programiZumba.addEventListener("click", () => {
-            mainDiv.setAttribute("style", "display:flex;");
-            zumbaDiv.setAttribute("style", "display:none");
-        });
-
-        saznajYoga.addEventListener("click", () => {
-            mainDiv.setAttribute("style", "display:none");
-            yogaDiv.setAttribute("style", "display:flex");
-            naslov.innerText = "Yoga";
-            naslov.setAttribute("style", "font-size:25px; font-weight:bold; text - transform: uppercase")
-        });
-
-        programiYoga.addEventListener("click", () => {
-            mainDiv.setAttribute("style", "display:flex;");
-            yogaDiv.setAttribute("style", "display:none");
-        });
-    </script>
 
         <!-- foooter -->
 
         <div id="footer" class="bg-dark">
-            <h2>REKLAME</h2>
+            <h2>Reklame</h2>
         </div>
 </body>
 
