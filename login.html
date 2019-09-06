@@ -11,23 +11,19 @@
     <link rel="stylesheet" href="Style/style.css">
     <link rel='stylesheet' href="Style/login.css">
 
-
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src='Script/login.js'></script>
     <title>Login</title>
 </head>
 
 <body>
     <nav id="navBar" class="navbar text-uppercase navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-
             <a class="navbar-brand text-success font-weight-bolder" href="index.html"><img id="logo" src="Img/logo.png" alt=""> ozon cross gym </a>
-
-
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -64,26 +60,45 @@
     </nav>
 
     <div id="mainD">
-        <div class="container">
-            <div class="row">
-            <div class="col-sm-12 col-md-7 leva">
-                <div id='omotac'><h3>PRIJAVI SE</h3></div>                
-                <input type="text" class="form-control border-success m-3 di" id="ime" name="ime" placeholder="Ime i prezime...">                
-                <input type="password" class="form-control border-success m-3 di" id="password" name="password" placeholder="Lozinka...">
-                <small id="passwordHelp" class="form-text text-muted m-3">Zaboravili ste lozinku? Kliknite <a href="#">ovde</a></small>
-                <button type="submit" class="btn btn-success m-3">PRIJAVI ME</button>
-            </div></div>
-            <div class="row">
-            <div class="col-sm-12 col-md-7 desna">
-                <h3>REGISTRUJ SE</h3>
-                <input type="text" class="form-control m-3 di" id="ime" name="ime" placeholder="Ime i prezime...">
-                <input type="email" class="form-control m-3 di" id="email" name="email" placeholder="Email...">                
-                <input type="password" class="form-control m-3 di" id="password" name="password" placeholder="Lozinka...">
-                <input type="password" class="form-control m-3 di" id="re_password" name="re_password" placeholder="Ponovljena lozinka...">
-                <button type="submit" class="btn btn-success m-3">REGISTRUJ ME</button>
-            </div></div>
-        </div>
+        <div class="row">
+            <form class="container" id='formular1'>    
+                <div class="col-sm-12 col-md-6 leva m-2">
+                <div id='omotac'>
+                    <h3>PRIJAVI SE</h3>
+                </div>                
+                <input type="text" class="form-control border-success m-2" id="ime" name="ime" placeholder="Ime i prezime...">                
+                <input type="password" class="form-control border-success m-2" id="password" name="password" placeholder="Lozinka...">
+                <small id="passwordHelp" class="form-text text-muted m-2">Zaboravili ste lozinku? Kliknite <a href="#">ovde</a></small>
+                <button type="button" class="btn btn-success m-2" id='prijava'>PRIJAVI ME</button>
+                </div>
+            </form>
 
+            <form class="container" id='formular2'>
+                <div class="col-sm-12 col-md-6 desna m-2">
+                <h3>REGISTRUJ SE</h3>
+				<div class="form-group">
+					Pol:
+					<div class="form-check form-check-inline">
+						<input name="pol" id="muski" value="male" type="radio" class="form-check-input">
+						<label for="muski" class="form-check-label">muski</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input name="pol" id="zenski" value="female" type="radio" class="form-check-input">
+						<label for="zenski" class="form-check-label">zenski</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type='text' class="form-control m-2" id="visina" name="visina" placeholder="Visina [cm]...">    
+                        <input type='text' class="form-control m-2" id="tezina" name="tezina" placeholder="Tezina [kg]...">
+                    </div>
+                </div>
+                <input type="text" class="form-control m-2" id="ime2" name="ime" placeholder="Ime i prezime...">
+                <input type="email" class="form-control m-2" id="email2" name="email" placeholder="Email...">                
+                <input type="password" class="form-control m-2" id="password2" name="password" placeholder="Lozinka...">
+                <input type="password" class="form-control m-2" id="re_password" name="re_password" placeholder="Ponovljena lozinka...">
+                <button type="button" class="btn btn-success m-2" id='registracija'>REGISTRUJ ME</button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <div id="footer" class="bg-dark">
