@@ -35,7 +35,7 @@ $(document).ready(() => {
             }
         }
 
-        return lengthCheck && (digitCounter >= 9);
+        return lengthCheck && (digitCounter == lengthCheck);
     }
     function validator(formElement, fnValidation)
     {
@@ -62,6 +62,7 @@ $(document).ready(() => {
         validator(formTelefon, validateTelefon);
     });
     
+    
 
     $('#posalji').click(() => {
         let contentIme = formIme.val();
@@ -86,29 +87,41 @@ $(document).ready(() => {
                 'telefon': contentTelefon,
             };
             console.log("Salju se podaci na server");
-            console.log(data);
+            console.log(data);    
             window.alert('USPESNO STE POSLALI PORUKU!');
+            $('#formular')[0].reset();
+            
         } else 
         {
             if(validateIme(contentIme)==false){
             formIme.css('color','red');
             formIme.val('Ime mora imati makar 5 karaktera!');
+            setTimeout(function(){$('#formular')[0].reset();
+                                    },4000);
         }
          if(validateEmail(contentEmail)==false){
             formEmail.css('color','red');
             formEmail.val('Neispravna email adresa!');
+            setTimeout(function(){$('#formular')[0].reset();
+                                    },4000);
         }
          if(validateNaslov(contentNaslov)==false){
             formNaslov.css('color','red');
             formNaslov.val('Naslov mora imati makar 4 karaktera!');
+            setTimeout(function(){$('#formular')[0].reset();
+                                    },4000);
         }
          if(validatePoruka(contentPoruka)==false){
             formPoruka.css('color','red');
             formPoruka.val('Poruka mora imati makar 5 karaktera!');
+            setTimeout(function(){$('#formular')[0].reset();
+                                    },4000);
         }
          if(validateTelefon(contentTelefon)==false){
             formTelefon.css('color','red');
             formTelefon.val('Telefon mora imati makar 9 cifara!');
+            setTimeout(function(){$('#formular')[0].reset();
+                                    },4000);
         }
     }
     });
