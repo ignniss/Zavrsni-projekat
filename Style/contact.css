@@ -11,16 +11,20 @@ span{
     font-size:20px;
     font-weight: 400;
 }
-#mainDi{
+#prvi{
     border-top:4px solid darkgrey;
-    background-image:url("../Img/slika1.jpg");
-    background-size:100%;
-    background-repeat:no-repeat;
-    height:800px;  
+    height:auto;  
     background-color: grey;  
+    text-align: center;
+}
+#drugi{
+    background-color: lightgreen;
+    border-top: 4px solid green;
+    height: auto;
 }
 h3{
-    color:green;
+    color:lightgreen;
     text-align: center;
+    font-weight: bold;
     font-family: 'Arial Bold';
 }
