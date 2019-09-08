@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 #main_div_kids{
-    background-color: grey;
+    background-color: lightslategrey;
     width: 100%;
     height: auto;
     display: flex;
