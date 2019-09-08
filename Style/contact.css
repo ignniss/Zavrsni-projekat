@@ -7,24 +7,34 @@
     color:green;
 }
 span{
-    color:white;
+    color:green;
     font-size:20px;
-    font-weight: 400;
+    font-weight: bold;
 }
 #prvi{
-    border-top:4px solid darkgrey;
+    border-top:1px solid green;
+    border-bottom:3px solid green;
     height:auto;  
     background-color: grey;  
     text-align: center;
+    text-align: center;
+
 }
 #drugi{
-    background-color: lightgreen;
-    border-top: 4px solid green;
+    background-color: grey;
+    border-top: 3px solid green;
     height: auto;
 }
 h3{
-    color:lightgreen;
+    color:green;
     text-align: center;
     font-weight: bold;
     font-family: 'Arial Bold';
+}
+#posalji{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#poruka{
+    margin:auto;
 }

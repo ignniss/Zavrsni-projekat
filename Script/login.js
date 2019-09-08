@@ -1,6 +1,8 @@
 $(document).ready(() => {
     let formIme = $('#ime');
     let formIme2=$('#ime2');
+    // let formPrezime2 = $('#prezime2');
+    // let korisnickoIme = $('#korisnickoIme');
     let formSifra=$('#password');
     let formSifra2=$('#password2');
     let formEmail = $('#email');

@@ -61,43 +61,51 @@
 
     <div id="mainD">
         <div class="row">
-            <form class="container" id='formular1'>    
-                <div class="col-sm-12 col-md-6 leva m-2">
-                <div id='omotac'>
-                    <h3>PRIJAVI SE</h3>
-                </div>                
-                <input type="text" class="form-control border-success m-2" id="ime" name="ime" placeholder="Ime i prezime...">                
-                <input type="password" class="form-control border-success m-2" id="password" name="password" placeholder="Lozinka...">
-                <small id="passwordHelp" class="form-text text-muted m-2">Zaboravili ste lozinku? Kliknite <a href="#">ovde</a></small>
-                <button type="button" class="btn btn-success m-2" id='prijava'>PRIJAVI ME</button>
-                </div>
-            </form>
+            <div class="container col-md-5">
+                <form class="container" id='formular1'>    
+                    <div class="col-sm-12 leva">
+                        <div id='omotac'>
+                            <h3>PRIJAVI SE</h3>
+                        </div>                
+                        <input type="text" class="form-control border-success m-2" id="ime" name="ime" placeholder="Korisnicko ime...">                
+                        <input type="password" class="form-control border-success m-2" id="password" name="password" placeholder="Lozinka...">
+                        <small id="passwordHelp" class="form-text text-muted m-2">Zaboravili ste lozinku? Kliknite <a href="#">ovde</a></small>
+                        <button type="button" class="btn btn-success m-2" id='prijava'>PRIJAVI ME</button>
+                    </div>
+                </form>
+            </div>
 
-            <form class="container" id='formular2'>
-                <div class="col-sm-12 col-md-6 desna m-2">
-                <h3>REGISTRUJ SE</h3>
-				<div class="form-group">
-					Pol:
-					<div class="form-check form-check-inline">
-						<input name="pol" id="muski" value="male" type="radio" class="form-check-input">
-						<label for="muski" class="form-check-label">muski</label>
-					</div>
-					<div class="form-check form-check-inline">
-						<input name="pol" id="zenski" value="female" type="radio" class="form-check-input">
-						<label for="zenski" class="form-check-label">zenski</label>
+            <div class="container col-md-5 mt-3 mb-3">
+                <form class="container" id='formular2'>
+                    <div class="col-sm-12 desna">
+                        <h3>REGISTRUJ SE</h3>
+                        <div class="form-group">
+                            Pol:
+                            <div class="form-check form-check-inline">
+                                <input name="pol" id="muski" value="male" type="radio" class="form-check-input">
+                                <label for="muski" class="form-check-label">muski</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input name="pol" id="zenski" value="female" type="radio" class="form-check-input">
+                                <label for="zenski" class="form-check-label">zenski</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input type='text' class="form-control m-2" id="visina" name="visina" placeholder="Visina [cm]...">    
+                                <input type='text' class="form-control m-2" id="tezina" name="tezina" placeholder="Tezina [kg]...">
+                            </div>
+                        </div>
+                        <input type="text" class="form-control m-2" id="ime2" name="ime" placeholder="Ime...">
+                        <input type="text" class="form-control m-2" id="prezime" name="prezime" placeholder="Prezime...">
+                        <input type="email" class="form-control m-2" id="email2" name="email" placeholder="Email...">  
+                        <input type="text" class="form-control m-2" id="korisnickoIme" name="korisnickoIme" placeholder="Korisnicko ime...">              
+                        <input type="password" class="form-control m-2" id="password2" name="password" placeholder="Lozinka...">
+                        <input type="password" class="form-control m-2" id="re_password" name="re_password" placeholder="Ponovljena lozinka...">
+                        <button type="button" class="btn btn-light m-2" id='registracija'><span>REGISTRUJ ME</span></button>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input type='text' class="form-control m-2" id="visina" name="visina" placeholder="Visina [cm]...">    
-                        <input type='text' class="form-control m-2" id="tezina" name="tezina" placeholder="Tezina [kg]...">
-                    </div>
-                </div>
-                <input type="text" class="form-control m-2" id="ime2" name="ime" placeholder="Ime i prezime...">
-                <input type="email" class="form-control m-2" id="email2" name="email" placeholder="Email...">                
-                <input type="password" class="form-control m-2" id="password2" name="password" placeholder="Lozinka...">
-                <input type="password" class="form-control m-2" id="re_password" name="re_password" placeholder="Ponovljena lozinka...">
-                <button type="button" class="btn btn-success m-2" id='registracija'>REGISTRUJ ME</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -107,3 +115,4 @@
 </body>
 
 </html>
+
