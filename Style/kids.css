@@ -66,3 +66,76 @@ H1 {
     padding-left: 25px;
     text-align: justify;
 }
+#slicice{
+    float: left;
+    clear: both;
+    position: relative;
+    display: block; 
+    margin-bottom: 30px;
+}
+#galerija{
+    color: green;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+
+
+
+#slicice,
+#slika {
+    width: 100%;
+    position: sticky;
+    top: 150px;
+    left: 0;
+    padding-left: 0px;
+    background-color: black;
+}
+
+#slicice {
+    margin-top: 0;
+    z-index: 1;
+}
+
+#slika {
+    z-index: 2;
+}
+
+#slika img {
+    width: 60%;
+    margin: auto;
+}
+
+.gallery {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.gallery:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    transition: .5s;
+}
+
+#levo,
+#desno {
+    top: 50%;
+    font-size: 40px;
+    color: aliceblue;
+    position: absolute;
+}
+
+#levo {
+    top: 50%;
+    left: 0px;
+}
+
+#desno {
+    right: 0px;
+}
+
+span:hover {
+    color: red;
+}

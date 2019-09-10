@@ -45,92 +45,98 @@ $(document).ready(() => {
         $('#slika').slideDown(1000);
     }
 
+    //Ecma6 cini cuda :)
 
+    for(let i = 1; i < 17; i++){
+        $(`#slicica${i}`).click(() => {
+            funkcija1();
+            image.attr('src', `Gallery/${i}.jpg`);
+            funkcija2();
+        });
+    }
 
-    $('#slicica01').click(() => {
-        funkcija1();
-        image.attr('src', 'Gallery/1.jpg');
-        funkcija2();
-    });
-    $('#slicica02').click(() => {
-        funkcija1();
-        image.attr('src', 'Gallery/2.jpg');
-        funkcija2();
-    });
-    $('#slicica03').click(() => {
-        funkcija1();
-        image.attr('src', 'Gallery/3.jpg');
-        funkcija2();
-    });
-    $('#slicica04').click(() => {
-        funkcija1();
-        image.attr('src', 'Gallery/4.jpg');
-        funkcija2();
-    });
-    $('#slicica05').click(() => {
-        funkcija1();
-        image.attr('src', 'Gallery/5.jpg');
-        funkcija2();
-    });
-    $('#slicica06').click(() => {
-        funkcija1();
-        image.attr('src', 'Gallery/6.jpg');
-        funkcija2();
-    });
-    $('#slicica07').click(() => {
-        funkcija1();
-        image.attr('src', 'Gallery/7.jpg');
-        funkcija2();
-    });
-    $('#slicica08').click(() => {
-        funkcija1();
-        image.attr('src', 'Gallery/8.jpg');
-        funkcija2();
-    });
-    $('#slicica09').click(() => {
-        funkcija1();
-        image.attr('src', 'Gallery/9.jpg');
-        funkcija2();
-    });
-    $('#slicica10').click(() => {
-        funkcija1();
-        image.attr('src', 'Gallery/10.jpg');
-        funkcija2();
-    });
-    $('#slicica11').click(() => {
-        funkcija1();
-        image.attr('src', 'Gallery/11.jpg');
-        funkcija2();
-    });
-    $('#slicica12').click(() => {
-        funkcija1();
-        image.attr('src', 'Gallery/12.jpg');
-        funkcija2();
-    });
-    $('#slicica13').click(() => {
-        funkcija1();
-        image.attr('src', 'Gallery/13.jpg');
-        funkcija2();
-    });
-    $('#slicica14').click(() => {
-        funkcija1();
-        image.attr('src', 'Gallery/14.jpg');
-        funkcija2();
-    });
-    $('#slicica15').click(() => {
-        funkcija1();
-        image.attr('src', 'Gallery/15.jpg');
-        funkcija2();
-    });
-    $('#slicica16').click(() => {
-        funkcija1();
-        image.attr('src', 'Gallery/16.jpg');
-        funkcija2();
-    });
+    // Ovo je visak...
 
-
-
-
+    // $('#slicica01').click(() => {
+    //     funkcija1();
+    //     image.attr('src', 'Gallery/1.jpg');
+    //     funkcija2();
+    // });
+    // $('#slicica02').click(() => {
+    //     funkcija1();
+    //     image.attr('src', 'Gallery/2.jpg');
+    //     funkcija2();
+    // });
+    // $('#slicica03').click(() => {
+    //     funkcija1();
+    //     image.attr('src', 'Gallery/3.jpg');
+    //     funkcija2();
+    // });
+    // $('#slicica04').click(() => {
+    //     funkcija1();
+    //     image.attr('src', 'Gallery/4.jpg');
+    //     funkcija2();
+    // });
+    // $('#slicica05').click(() => {
+    //     funkcija1();
+    //     image.attr('src', 'Gallery/5.jpg');
+    //     funkcija2();
+    // });
+    // $('#slicica06').click(() => {
+    //     funkcija1();
+    //     image.attr('src', 'Gallery/6.jpg');
+    //     funkcija2();
+    // });
+    // $('#slicica07').click(() => {
+    //     funkcija1();
+    //     image.attr('src', 'Gallery/7.jpg');
+    //     funkcija2();
+    // });
+    // $('#slicica08').click(() => {
+    //     funkcija1();
+    //     image.attr('src', 'Gallery/8.jpg');
+    //     funkcija2();
+    // });
+    // $('#slicica09').click(() => {
+    //     funkcija1();
+    //     image.attr('src', 'Gallery/9.jpg');
+    //     funkcija2();
+    // });
+    // $('#slicica10').click(() => {
+    //     funkcija1();
+    //     image.attr('src', 'Gallery/10.jpg');
+    //     funkcija2();
+    // });
+    // $('#slicica11').click(() => {
+    //     funkcija1();
+    //     image.attr('src', 'Gallery/11.jpg');
+    //     funkcija2();
+    // });
+    // $('#slicica12').click(() => {
+    //     funkcija1();
+    //     image.attr('src', 'Gallery/12.jpg');
+    //     funkcija2();
+    // });
+    // $('#slicica13').click(() => {
+    //     funkcija1();
+    //     image.attr('src', 'Gallery/13.jpg');
+    //     funkcija2();
+    // });
+    // $('#slicica14').click(() => {
+    //     funkcija1();
+    //     image.attr('src', 'Gallery/14.jpg');
+    //     funkcija2();
+    // });
+    // $('#slicica15').click(() => {
+    //     funkcija1();
+    //     image.attr('src', 'Gallery/15.jpg');
+    //     funkcija2();
+    // });
+    // $('#slicica16').click(() => {
+    //     funkcija1();
+    //     image.attr('src', 'Gallery/16.jpg');
+    //     funkcija2();
+    // });
 
     $('#slika').on('click', '#zatvori', () => {
         $('#slika').hide();
