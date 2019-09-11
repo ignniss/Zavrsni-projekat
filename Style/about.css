@@ -1,32 +1,46 @@
-body{
-    background-color: lightslategray;
-    box-sizing: border-box;
-}
-img {
-    width: 100px;
-}
 
-#gore,
-#sredina,
-#dole,
-#leviDole {
-    text-align: left;
+img {
+    width: 150px;
+    /* cursor: pointer; */
+}
+#oNama {
     border: solid green 2px;
-    padding: 10px;
-    margin: 10px;
+    padding: 20px;
     border-radius: 10px;
     background-color: rgb(23, 136, 136);
+    text-align: justify;
+    box-sizing: border-box;
 }
-
-#mainDiv3 {
-    /* overflow: scroll; */
+h3{
+    text-align: center;
+    color: green;
+}
+h4{
+    line-height: 150px;
+}
+#mainDivAbout {
     background-color: lightslategray;
     width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+#treneri{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 10px;
+    padding: 0px;
+    margin: 0px;
+}
+.trener{
+    background-color: rgb(23, 136, 136);
+    margin-bottom:30px;
+    padding: 20px;
+    text-align: justify;
+    border: 2px solid green;
+    border-radius: 10px;
 }
 
-.text {}
 
-img {
-    cursor: pointer;
-}
+
