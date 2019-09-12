@@ -39,24 +39,3 @@
     opacity: 1;
     transition: .5s;
 }
-
-#levo,
-#desno {
-    top: 50%;
-    font-size: 40px;
-    color: aliceblue;
-    position: absolute;
-}
-
-#levo {
-    top: 50%;
-    left: 0px;
-}
-
-#desno {
-    right: 0px;
-}
-
-span:hover {
-    color: red;
-}
