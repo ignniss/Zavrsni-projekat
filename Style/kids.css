@@ -5,21 +5,31 @@
     text-align: justify;
     border: 1px solid black;
     border-radius: 10px;
+    box-shadow: 10px 10px 15px black
+}
+
+h1 {
+    color: rgb(24, 192, 24);
+    text-shadow: 5px 5px 15px black;
 }
 
 h4 {
     font-weight: bold;
+    color: rgb(24, 192, 24);
+    text-shadow: 5px 5px 15px black;
 }
 
 .image {
     border: 1px solid black;
     border-radius: 10px;
+    box-shadow: 10px 10px 25px black
 }
 
 #slicice,
 #slika {
     background-color: black;
     border-radius: 10px;
+    box-shadow: 10px 10px 25px black
 }
 
 #slika {

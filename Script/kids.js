@@ -12,34 +12,35 @@ $(document).ready(() => {
     };
 
     function funkcija2() {
-        $('#slika').append(image);
+        $('#slika').append(span1).append(span2).append(span3).append(image);
         span1.attr('id', 'zatvori');
         span1.css({
             'color': 'white',
             'position': 'relative',
-            'top': '0',
-            'right': '0px',
+            'top': '0px',
+            'left': '95%',
             'font-size': '40px',
             'cursor': 'pointer'
         })
         span2.css({
             'color': 'white',
             'position': 'relative',
-            'top': '10%',
-            'left': '10px',
+            'top': '50%',
+            'left': '-8%',
             'font-size': '40px',
             'cursor': 'pointer'
         })
         span3.css({
             'color': 'white',
-            'top': '0%',
-            'right': '10px',
+            'position': 'relative',
+            'top': '50%',
+            'left': '100%',
             'font-size': '40px',
             'cursor': 'pointer'
         })
-        $('#slika').append(span1).append(span2).append(span3);
 
-        $('#slika').slideDown(1000);
+
+        //$('#slika').slideDown(1000);
     }
 
 
