@@ -1,111 +1,33 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-#main_div_kids{
-    background-color: lightslategrey;
-    width: 100%;
-    height: auto;
-    display: flex;
-}
-#naslov {
-    margin-bottom: 20px;
-}
-img {
-    width: 100%;
-}
-#img_kids1 {
-    margin-bottom: 5px;
-}
-H1 {
-    color: green;
-    text-align: center;
-    padding-top: 2%;
-    font: bold;
-    font-family: army;
-}
-#struktura_casova {
-    float: left;
-    position: relative;
-    margin-bottom: 20px;
-}
-#foto {
-    float: right;
-    /* position: relative; */
-    margin-bottom: 20px;
-}
-#info {
-    float: left;
-    clear: left;
-    position: relative;
-    padding: 0px;
-    margin-bottom: 20px;
-}
-#plan_i_program {
-    float: left;
-    clear: left;
-    margin-bottom: 20px;
-}
-#dodatne_aktivnosti {
-    margin-left: 0px;
-    float: right;
-}
-#prednost_programa {
-    width: 100%;
-    float: left;
-    clear: both;
-    margin-bottom: 30px;
-}
-.borders{
-    border: 2px solid green;
-    box-shadow: 5px -5px green;
-    border-radius: 25px;
+.text {
     background-color: rgb(23, 136, 136);
-    padding-top: 10px;
-    padding-left: 25px;
-    text-align: justify;
-}
-#slicice{
-    float: left;
-    clear: both;
-    position: relative;
-    display: block; 
     margin-bottom: 30px;
+    padding: 20px;
+    text-align: justify;
+    border: 1px solid black;
+    border-radius: 10px;
 }
-#galerija{
-    color: green;
-    text-align: center;
+
+h4 {
     font-weight: bold;
 }
 
-
-
-
-
+.image {
+    border: 1px solid black;
+    border-radius: 10px;
+}
 
 #slicice,
 #slika {
-    width: 100%;
-    position: sticky;
-    top: 150px;
-    left: 0;
-    padding-left: 0px;
     background-color: black;
-}
-
-#slicice {
-    margin-top: 0;
-    z-index: 1;
+    border-radius: 10px;
 }
 
 #slika {
-    z-index: 2;
+    display: none;
 }
 
 #slika img {
-    width: 60%;
-    margin: auto;
+    width: 100%;
 }
 
 .gallery {
@@ -117,25 +39,4 @@ H1 {
     transform: scale(1.1);
     opacity: 1;
     transition: .5s;
-}
-
-#levo,
-#desno {
-    top: 50%;
-    font-size: 40px;
-    color: aliceblue;
-    position: absolute;
-}
-
-#levo {
-    top: 50%;
-    left: 0px;
-}
-
-#desno {
-    right: 0px;
-}
-
-span:hover {
-    color: red;
 }
