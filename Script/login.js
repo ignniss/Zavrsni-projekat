@@ -1,8 +1,8 @@
 $(document).ready(() => {
     let formIme = $('#ime');
     let formIme2=$('#ime2');
-    // let formPrezime2 = $('#prezime2');
-    // let korisnickoIme = $('#korisnickoIme');
+    let formPrezime2 = $('#prezime');
+    let formKorisnickoIme = $('#korisnickoIme');
     let formSifra=$('#password');
     let formSifra2=$('#password2');
     let formEmail = $('#email');
@@ -16,6 +16,14 @@ $(document).ready(() => {
     function validateIme(Ime)
     {
         return Ime.trim().length >= 5;
+    }
+    function validatePrezime(Prezime)
+    {
+        return Prezime.trim().length >= 5;
+    }
+    function validateKorisnickoIme(KorisnickoIme)
+    {
+        return KorisnickoIme.trim().length >= 5;
     }
     function validateTezina(Tezina){
         return Tezina > 0;
@@ -89,7 +97,12 @@ $(document).ready(() => {
     formVisina.on('input',() =>{
         validator(formVisina,validateVisina);
     });
-    
+    formPrezime2.on('input',() =>{
+        validator(formPrezime2,validatePrezime);
+    });
+    formKorisnickoIme.on('input',() =>{
+        validator(formKorisnickoIme,validateKorisnickoIme);
+    });
     
     $('#prijava').click(() => {
         let contentIme = formIme.val();
@@ -126,6 +139,8 @@ $(document).ready(() => {
 
     $('#registracija').click(() => {
         let contentIme = formIme2.val();
+        let contentPrezime2 = formPrezime2.val();
+        let contentKorisnickoIme=formKorisnickoIme.val();
         let contentSifra=formSifra2.val();
         let contentReSifra=formReSifra.val();
         let contentEmail2=formEmail2.val();
@@ -135,11 +150,13 @@ $(document).ready(() => {
         
         if (validateIme(contentIme) && validateVisina(contentVisina) && validateTezina(contentTezina) &&
             validatePassword(contentSifra) && validatePasswordMatch(contentSifra,contentReSifra) &&
-            validateEmail(contentEmail2) 
+            validateEmail(contentEmail2) && validatePrezime(contentPrezime2) && validateKorisnickoIme(contentKorisnickoIme)
         ) {
             // Prosle su sve validacije, mozemo da saljemo podatke na server - jos uvek lazno :)
             let data = {
                 'ime': contentIme,
+                'prezime':contentPrezime2,
+                'korisnicko_ime':contentKorisnickoIme,
                 'sifra': contentSifra,
                 'email':contentEmail2,
                 'pol':contentPol,
@@ -155,6 +172,20 @@ $(document).ready(() => {
             if(validateIme(contentIme)==false){
             formIme2.css('color','red');
             formIme2.val('Ime mora imati makar 5 karaktera!');
+            setTimeout(function(){$('#formular2')[0].reset();
+                            },4000);
+            
+        }
+        if(validatePrezime(contentPrezime2)==false){
+            formPrezime2.css('color','red');
+            formPrezime2.val('Prezime mora imati makar 5 karaktera!');
+            setTimeout(function(){$('#formular2')[0].reset();
+                            },4000);
+            
+        }
+        if(validateKorisnickoIme(contentKorisnickoIme)==false){
+            formKorisnickoIme.css('color','red');
+            formKorisnickoIme.val('Korisnicko ime mora imati makar 4 karaktera!');
             setTimeout(function(){$('#formular2')[0].reset();
                             },4000);
             
