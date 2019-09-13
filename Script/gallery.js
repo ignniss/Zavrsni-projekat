@@ -3,6 +3,7 @@ $(document).ready(() => {
     let span1 = $('<span>&times<span>');
     let span2 = $('<span>&#10094<span>');
     let span3 = $('<span>&#10095<span>');
+    let duzina = $('.gallery').length;
 
 
     function funkcija1() {
@@ -40,12 +41,12 @@ $(document).ready(() => {
         })
         $('#slika').append(span1).append(span2).append(span3);
 
-        $('#slika').slideDown(1000);
+
     }
 
 
 
-    for (let i = 1; i < 17; i++) {
+    for (let i = 1; i <= duzina; i++) {
         $(`#slicica${i}`).click(() => {
             funkcija1();
             image.attr('src', `Gallery/${i}.jpg`);
