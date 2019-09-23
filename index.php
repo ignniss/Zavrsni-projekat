@@ -23,7 +23,7 @@
     <nav id="navBar" class="navbar text-uppercase navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
 
-            <a class="navbar-brand text-success font-weight-bolder" href="index.html"><img id="logo" src="Img/logo.png" alt=""> ozon cross gym </a>
+            <a class="navbar-brand text-success font-weight-bolder" href="index.php"><img id="logo" src="Img/logo.png" alt=""> ozon cross gym </a>
 
 
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -32,25 +32,25 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto ">
                     <li class="nav-item">
-                        <a class="nav-link text-success" href="index.html">Home</a>
+                        <a class="nav-link text-success" href="index.php">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="training.html">cross gym training</a>
+                        <a class="nav-link" href="training.php">cross gym training</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cross_sport_kids.html">cross sport kids</a>
+                        <a class="nav-link" href="cross_sport_kids.php">cross sport kids</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">about us</a>
+                        <a class="nav-link" href="about.php">about us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">gallery</a>
+                        <a class="nav-link" href="gallery.php">gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">contact us</a>
+                        <a class="nav-link" href="contact.php">contact us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">login/register</a>
+                        <a class="nav-link" href="login.php">login/register</a>
                     </li>
                     <li class="nav-item">
                         <img id="ser" src="Img/ser.png" alt="SER">
