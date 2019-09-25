@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,9 +56,18 @@
                     <li class="nav-item">
                         <a class="nav-link text-success" href="contact.php">contact us</a>
                     </li>
+                    <?php if(isset($_SESSION['id'])):  ?>
                     <li class="nav-item">
-                        <a class="nav-link " href="login.php">login/register</a>
+                        <a class="nav-link" href="profile.php">profile</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php">logout</a>
+                    </li>
+                    <?php else: ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">login/Register</a>
+                    </li>
+                    <?php endif ?>
                     <li class="nav-item">
                         <img id="ser" src="Img/ser.png" alt="SER">
                         <img id="uk" src="Img/uk.png" alt="ENG">
