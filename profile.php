@@ -1,7 +1,16 @@
 
 <?php
 session_start();
-echo "cao";
+$id=$_SESSION['id'];
+
+require 'connection.php';
+$sql ="SELECT * FROM users WHERE id= $id";
+$query =mysqli_query($conn, $sql);
+$result=mysqli_fetch_assoc($query); 
+$tezina=$result['tezina'];
+$visina=$result['visina'];
+$bmi=round ($tezina/pow($visina/100, 2),2);
+ 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,8 +89,87 @@ echo "cao";
             </div>
         </div>
     </nav>
+    <div class="container">
+<div class="row">
+<div class="col-4">
+<html>
+<body>
+		
+<form method="POST" action="getdata.php" enctype="multipart/form-data">
+ <input type="file" name="myimage">
+ <input type="submit" name="submit_image" value="Upload">
+</form>
 
+</body>
+</html>
+
+
+</div>
+
+<div class="col-8">
+    <p class="font-weight-bold display-4 text-center text-dark">DOBRO DOŠLI</p>
+    <p class="font-weight-bold text-center">VAŠ PROFIL:</p> 
+    <p class="font-weight-bold">IME: <?php echo '<span class="text-success font-weight-bold text-light">'. $result['ime'].'</span>'  ?> </p> 
+    <p class="font-weight-bold">PREZIME: <?php echo '<span class="text-success font-weight-bold text-light">'.$result['prezime'].'</span>'  ?></p>
+    <p class="font-weight-bold">VAŠ ID: <?php echo '<span class="text-success font-weight-bold text-light">'.$result['id'].'</span>'  ?></p>
+    <p class="font-weight-bold">VRSTA PROGRAMA: <?php echo '<span class="text-success font-weight-bold text-light">'. $result['tip_programa'].'</span>'  ?></p>
+    <p class="font-weight-bold">POL: <?php echo '<span class="text-success font-weight-bold text-light">'. $result['pol'].'</span>'  ?> </p>
+    <p class="font-weight-bold">VISINA: <?php echo '<span class="text-success font-weight-bold text-light">'. $result['visina'].' cm </span>'  ?> </p>
+    <p class="font-weight-bold">TELESNA MASA: <?php echo '<span class="text-success font-weight-bold text-light">'. $result['tezina'].' kg </span>'  ?> </p>
+    <p class="font-weight-bold">BMI: <?php echo '<span class="text-success font-weight-bold text-light">'. $bmi.'</span>' ?>
+    <?php  
     
+    switch ($bmi){
+        case $bmi<18.5:
+        echo  '<span class="text-success font-weight-bold text-warning"> (neuhranjenost)</span>';
+        break;
+        case $bmi<24.9:
+        echo '<span class="text-success font-weight-bold text-success"> (idealna telesna masa)</span>';
+        break;
+        case $bmi<29.9:
+        echo'<span class="text-success font-weight-bold text-warning"> (prekomerna masa)</span>';
+        break;
+        case $bmi<34.9:
+        echo '<span class="text-success font-weight-bold text-warning"> (blaga gojaznost)</span>';
+        break;
+        case $bmi<39.9:
+        echo '<span class="text-success font-weight-bold text-danger"> (teška gojaznost)</span>';
+        break;
+        
+        default:
+        echo '<span class="text-success font-weight-bold text-danger"> (ekstremna gojaznost)</span>';
+    }
+    
+    ?>
+    
+     </p>
+    <form action="profile-change.php">
+    <button class="btn btn-warning mb-4">IZMENI</button>
+    </form>
+    <p class="font-weight-bold text-center text-light">PRIJAVITE PRISUSTVO NA TRENINGU</p>
+    <button class="btn btn-success mb-4">PRIJAVI SE</button>
+    
+
+
+
+</div>
+
+</div>
+
+
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
 
     <div id="footer" class="bg-dark">
         <h2>REKLAME</h2>
