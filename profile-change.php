@@ -89,97 +89,93 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
     <div class="container">
         <div class="row">
             <div class="col-4">
-                <html>
 
-                <body>
+                <form action="profile-update.php" method="post">
 
-                    <form method="POST" action="getdata.php" enctype="multipart/form-data">
-                        <input type="file" name="myimage">
-                        <input type="submit" name="submit_image" value="Upload">
-                    </form>
-
-                </body>
-
-                </html>
-
+                    <p class="font-weight-bold text-center text-light mt-4">PROMENITE PROFILNU SLIKU</p>
+                    <input type="file" class="form-control mt-4" name="myimage">
+                    <input class="btn btn-primary mt-2" type="submit" name="submit_image" value="Upload">
 
             </div>
             <div class="col-8">
+
                 <p class="font-weight-bold display-4 text-center text-dark">DOBRO DOŠLI</p>
                 <p class="font-weight-bold text-center">VAŠ PROFIL:</p>
                 <p class="font-weight-bold">IME: <?php echo '<span class="text-success font-weight-bold text-light">' . $result['ime'] . '</span>'  ?> </p>
                 <p class="font-weight-bold">PREZIME: <?php echo '<span class="text-success font-weight-bold text-light">' . $result['prezime'] . '</span>'  ?></p>
                 <p class="font-weight-bold">VAŠ ID: <?php echo '<span class="text-success font-weight-bold text-light">' . $result['id'] . '</span>'  ?></p>
-                <form action="profile-update.php" method="post">
-
-                    <p class="font-weight-bold">VRSTA PROGRAMA:</p>
-                    <?php
-                    function fja1($a, $x, $y)
-                    {
-                        if ($a == $x) {
-                            echo trim($x);
-                        } else echo trim($y);
-                    };
-                    function fja2($a, $x, $y)
-                    {
-                        if ($a == $x) {
-                            echo trim($y);
-                        } else echo trim($x);
-                    };
+                <p class="font-weight-bold">KORISNIČKO IME:</p> <input type="text" class="form-control" name="korisnicko_ime" value="<?php echo $result['korisnicko_ime'] ?>">
 
 
+                <p class="font-weight-bold">VRSTA PROGRAMA:</p>
+                <?php
+                function fja1($a, $x, $y)
+                {
+                    if ($a == $x) {
+                        echo $x;
+                    } else echo $y;
+                };
+                function fja2($a, $x, $y)
+                {
+                    if ($a == $x) {
+                        echo $y;
+                    } else echo $x;
+                };
 
 
-                    ?>
 
-                    <select class="form-control" name="program" id="">
-                        <option value="
+
+                ?>
+
+                <select class="form-control" name="program" id="">
+                    <option value="
                         <?php
                         fja1($GLOBALS['program'], 'deca', 'odrasli');
                         ?>
                         ">
-                            <?php
-                            fja1($GLOBALS['program'], 'deca', 'odrasli');
-                            ?>
-                        </option>
-                        <option value="
+                        <?php
+                        fja1($GLOBALS['program'], 'deca', 'odrasli');
+                        ?>
+                    </option>
+                    <option value="
                         <?php
                         fja2($GLOBALS['program'], 'deca', 'odrasli');
                         ?>
                         ">
-                            <?php
-                            fja2($GLOBALS['program'], 'deca', 'odrasli');
-                            ?>
-                        </option>
+                        <?php
+                        fja2($GLOBALS['program'], 'deca', 'odrasli');
+                        ?>
+                    </option>
 
-                    </select>
-                    <p class="font-weight-bold">POL: </p>
-                    <select class="form-control" name="pol" id="">
-                        <option value="
+                </select>
+                <p class="font-weight-bold">POL: </p>
+                <select class="form-control" name="pol" id="">
+                    <option value="
                         <?php
                         fja1($GLOBALS['pol'], 'muški', 'ženski');
                         ?>
                         ">
-                            <?php
-                            fja1($GLOBALS['pol'], 'muški', 'ženski');
-                            ?>
-                        </option>
-                        <option value="
+                        <?php
+                        fja1($GLOBALS['pol'], 'muški', 'ženski');
+                        ?>
+                    </option>
+                    <option value="
                         <?php
                         fja2($GLOBALS['pol'], 'muški', 'ženski');
                         ?>
                         ">
-                            <?php
-                            fja2($GLOBALS['pol'], 'muški', 'ženski');
-                            ?>
-                        </option>
+                        <?php
+                        fja2($GLOBALS['pol'], 'muški', 'ženski');
+                        ?>
+                    </option>
 
-                    </select>
-                    <p class="font-weight-bold">VISINA:</p> <input type="text" class="form-control" name="visina" value="<?php echo $result['visina'] ?>">
-                    <p class="font-weight-bold">TELESNA MASA: </p><input type="text" class="form-control" name="tezina" value="<?php echo $result['tezina'] ?>">
+                </select>
+                <p class="font-weight-bold">VISINA:</p> <input type="text" class="form-control" name="visina" value="<?php echo $result['visina'] ?>">
+                <p class="font-weight-bold">TELESNA MASA: </p><input type="text" class="form-control" name="tezina" value="<?php echo $result['tezina'] ?>">
+                <p class="font-weight-bold">IMEJL ADRESA: </p><input type="text" class="form-control" name="Email" value="<?php echo $result['Email'] ?>">
 
 
-                    <button type="submit " class="btn btn-success mb-4 mt-3">SAČUVAJ</button>
+                <button type="submit " class="btn btn-success mb-4 mt-3">SAČUVAJ</button>
                 </form>
 
 
