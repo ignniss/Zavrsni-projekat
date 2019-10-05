@@ -25,11 +25,28 @@ session_start();
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous">
     </script>
-    <script src='Script/contact.js'></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>  
+    <style>
+    
+    .se-pre-con {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url("http://smallenvelop.com/wp-content/uploads/2014/08/Preloader_11.gif") center no-repeat #fff;
+    }
+    </style>
+   
     <title>Contact</title>
 </head>
 
 <body>
+<div class="se-pre-con"></div>
+
     <nav id="navBar" class="navbar text-uppercase navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand text-success font-weight-bolder" href="index.php"><img id="logo" src="Img/logo.png" alt=""> ozon cross gym </a>
@@ -77,33 +94,33 @@ session_start();
         </div>
     </nav>
    
-   
+
    <div id="prvi">
-        <form class="container" id='formular'>
+        <form class="container" id='formular' action='mail.php' method='POST'>
             <h3 class="mt-3">UKOLIKO IMATE NEKIH PITANJA MOZETE NAS KONTAKTIRATI </h3>
             <div class="form-group row mt-3">
                 <div class="col-sm-5 col-lg-4">
-                    <input type="text" class="form-control m-2" id="ime" placeholder="Ime i prezime*">
+                    <input type="text" class="form-control m-2" id="ime" placeholder="Ime i prezime*" name='ime'>
                 </div>
                 <div class="col-sm-5 col-lg-4">
-                    <input type="text" class="form-control m-2" id="telefon" placeholder="Telefon*">
+                    <input type="text" class="form-control m-2" id="telefon" placeholder="Telefon*" name='telefon'>
                 </div>
             </div>
             
             <div class="form-group row mb-3">
                 <div class="col-sm-5 col-lg-4">
-                    <input type="email" class="form-control m-2" id="email" placeholder="Email*">
+                    <input type="email" class="form-control m-2" id="email" placeholder="Email*" name='email'>
                 </div>
                 <div class="col-sm-5 col-lg-4">
-                    <input type="text" class="form-control m-2" id="naslov" placeholder="Naslov poruke*">
+                    <input type="text" class="form-control m-2" id="naslov" placeholder="Naslov poruke*" name='naslov'>
                 </div>
             </div>
             
             <div class="form-group col-sm-10 col-lg-8">
-                <textarea class="form-control" id="poruka" rows="4" placeholder="Poruka*"></textarea>
+                <textarea class="form-control" id="poruka" rows="4" placeholder="Poruka*" name='poruka'></textarea>
             </div>            
             <div class="col-sm-10  col-lg-8 ">
-                <button type="button" id="posalji" class="btn btn-success">POSALJI</button>
+                <button type="submit" id="posalji" class="btn btn-success" name='btnPosalji'>POSALJI</button>
             </div>                        
         </form>    
      </div>
@@ -134,7 +151,13 @@ session_start();
             </div>
      </div>
 
-    
+     <script>
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+</script>
+
 
     <div id="footer" class="bg-dark">
         <h2>REKLAME</h2>
