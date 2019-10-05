@@ -1,4 +1,5 @@
 
+
 <?php
 session_start();
 ?>
@@ -21,13 +22,28 @@ session_start();
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    </body>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>  
+    <style>
+    
+    .se-pre-con {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url("http://smallenvelop.com/wp-content/uploads/2014/08/Preloader_11.gif") center no-repeat #fff;
+    }
+    </style>
 
     <title>Gallery</title>
 </head>
 
 <body>
+<div class="se-pre-con"></div>
+
     <nav id="navBar" class="navbar text-uppercase navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
 
@@ -110,8 +126,12 @@ session_start();
                 <img class="img-fluid col-md-3 mt-3 mb-3 gallery" id="slicica15" src="Gallery/15.jpg" alt="">
                 <img class="img-fluid col-md-3 mt-3 mb-3 gallery" id="slicica16" src="Gallery/16.jpg" alt="">
             </div>
-
-
+        <script>
+            $(window).load(function() {
+                // Animate loader off screen
+                $(".se-pre-con").fadeOut("slow");;
+            });
+        </script>
 
         </div>
         <div id="slika">
