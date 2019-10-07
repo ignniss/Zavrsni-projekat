@@ -19,13 +19,13 @@
             $korisnickoIme = mysqli_real_escape_string($conn, $_POST['korisnickoIme']);
             $password = mysqli_real_escape_string($conn, $_POST['password']);
             $re_password = mysqli_real_escape_string($conn, $_POST['re_password']);
+            $datum_sada=date('Y-m-d');
 
             if(strcmp($password, $re_password)!=0){
                 echo '<strong>Niste tacno ponovili lozinku!!</strong>';
             }else{
         /* Formiramo insert upit kojim prosledjene podatke upisujemo u bazu. */
-        $query = "INSERT INTO users (tip_programa, pol, visina, tezina, ime, prezime, Email, korisnicko_ime, sifra, ponovljena_sifra, id) 
-        VALUES ('$tip_programa','$pol', '$visina', '$tezina', '$ime', '$prezime', '$email', '$korisnickoIme', '$password', '$re_password', NULL)";
+        $query = "INSERT INTO users VALUES ('$tip_programa','$pol', '$visina', '$tezina', '$ime', '$prezime', '$email', '$korisnickoIme', '$password', '$re_password', NULL, 'trener.png', NULL, '$datum_sada', NULL, NULL )";
 
         /* Izvrsavamo upit. Rezultat izvrsavanja moze biti true ili false vrednost. */
         $result = mysqli_query($conn, $query);

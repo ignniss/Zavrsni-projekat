@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'mojFont';
+    src: url('../Fonts/armalite.ttf') format('truetype'), url('../Fonts/armalite-webfont.woff') format('woff');
+}
+
+#admin_btn {
+    display: none;
+}
+
+#dobrodosli {
+    font-family: 'mojFont';
+    text-shadow: 5px 5px 15px black;
+}
+
+#profilna {
+    width: 70%;
+    box-shadow: 5px 5px 15px black;
+    border: 1px solid black;
+    border-radius: 10px;
+}
