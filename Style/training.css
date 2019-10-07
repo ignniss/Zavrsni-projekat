@@ -1,0 +1,76 @@
+#mainDivTraining{
+    background-color: lightslategrey;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;    
+}
+
+#naslov{
+    padding-top: 15px;
+    text-align: center;
+    color: green;
+}
+
+img{
+    width: 100%;
+}
+
+#kontejner{
+    width: 100%;
+    margin-top:30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box{
+    box-sizing: border-box;
+    background-color: rgb(23, 136, 136);
+    border:2px solid green;
+    border-radius: 25px;
+    box-shadow: 5px -5px green;
+    padding: 10px 10px;
+    margin-bottom: 60px;
+    text-align: justify;
+}
+
+.box1{
+    box-sizing: border-box;
+    background-color: rgb(23, 136, 136);
+    padding: 10px 10px;
+    margin-bottom: 60px;
+    text-align: justify;
+    border:2px solid green;
+}
+
+.saznajVise{
+    color: green;
+    font-weight:bold;
+    font-size: 20px;
+}
+
+p{
+    margin-top: 10px;
+}
+
+h3{
+    text-align: center;
+}
+
+#kontejnerPilates, #kontejnerZumba, #kontejnerYoga,
+#kontejnerCrossBox, #kontejnerCrossTraining, #kontejnerCrossConditioning
+{
+    width: 100%;
+    height: auto;
+    margin-top:30px;
+    box-sizing: border-box;
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+

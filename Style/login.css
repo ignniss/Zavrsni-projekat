@@ -1,0 +1,36 @@
+.leva {
+    background-color: white;
+    height:auto;    
+}
+.desna {
+    background-color: rgb(46, 116, 46);
+    height: auto;
+}
+#omotac{
+    margin-left:-15px;
+    margin-top:20px;
+    width: 50%;
+    height:auto;
+    background-color: rgb(46, 116, 46);
+    border:3px solid darkslategrey;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+}
+h3{
+    color:white;
+    font-weight: 400;
+    padding: 10px;
+    text-align: center;
+    font-family:Tahoma;
+}
+#mainD{
+    width:100%;
+    background-color:lightslategrey;
+    height: auto;
+    text-align: center;
+}
+span{
+    color: green;
+    font-weight: bold;
+}
+

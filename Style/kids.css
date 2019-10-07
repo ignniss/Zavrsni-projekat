@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'mojFont';
+    src: url('../Fonts/armalite.ttf') format('truetype'), url('../Fonts/armalite-webfont.woff') format('woff');
+}
+
+.text {
+    background-color: rgb(23, 136, 136);
+    margin-bottom: 30px;
+    padding: 20px;
+    text-align: justify;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px black
+}
+
+h1 {
+    font-family: 'mojFont';
+    color: rgb(24, 192, 24);
+    text-shadow: 5px 5px 15px black;
+}
+
+h4 {
+    font-weight: bold;
+    color: rgb(24, 192, 24);
+    text-shadow: 5px 5px 15px black;
+}
+
+.image {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 25px black
+}
+
+#slicice,
+#slika {
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 25px black
+}
+
+#slika {
+    display: none;
+}
+
+#slika img {
+    width: 100%;
+}
+
+.gallery {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.gallery:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    transition: .5s;
+}

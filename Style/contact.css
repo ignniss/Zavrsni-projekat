@@ -1,0 +1,40 @@
+*{
+    margin: auto;
+}
+.kontakt{
+    font-size:30px;
+    font-weight:bold;
+    color:green;
+}
+span{
+    color:green;
+    font-size:20px;
+    font-weight: bold;
+}
+#prvi{
+    border-top:1px solid green;
+    border-bottom:3px solid green;
+    height:auto;  
+    background-color: lightslategrey;  
+    text-align: center;
+    text-align: center;
+
+}
+#drugi{
+    background-color: lightgray;
+    border-top: 3px solid green;
+    height: auto;
+}
+h3{
+    color:green;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Arial Bold';
+}
+#posalji{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#poruka{
+    margin:auto;
+}
