@@ -1,0 +1,63 @@
+.card {
+    position: relative;
+    color: black;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+.container {
+    position: relative;
+}
+
+#levo,
+#desno {
+    background-color: darkslategrey;
+    border: solid 1px white;
+    border-radius: 10px;
+}
+
+#novi_korisnici_pretraga,
+#poseta_danas_pretraga,
+#broj_mesec_pretraga,
+#clanarine_pretraga {
+    display: none;
+}
+
+.table-wrapper {
+    position: absolute;
+    top: 110px;
+    z-index: 2;
+    display: inline-block;
+}
+
+table {
+    background-color: gray;
+}
+
+th,
+td {
+    text-align: center;
+    height: 40px;
+    padding: 10px;
+}
+
+th {
+    color: wheat;
+    background-color: brown;
+}
+
+#dugme_odjava {
+    position: fixed;
+}
+
+a {
+    color: brown;
+    font-weight: bolder;
+}
+
+#tabela_pretraga {
+    display: none;
+    background-color: darkslategrey;
+    border: solid 1px white;
+    border-radius: 10px;
+}

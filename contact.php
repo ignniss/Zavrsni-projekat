@@ -152,11 +152,11 @@ session_start();
      </div>
 
      <script>
-	$(window).load(function() {
+	    $(window).load(function() {
 		// Animate loader off screen
 		$(".se-pre-con").fadeOut("slow");;
-	});
-</script>
+	    });
+    </script>
 
 
     <div id="footer" class="bg-dark">

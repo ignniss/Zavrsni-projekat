@@ -1,0 +1,27 @@
+.container {
+    position: relative;
+}
+
+th,
+td {
+    text-align: center;
+    height: 40px;
+    padding: 10px;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+th {
+    color: wheat;
+    background-color: brown;
+}
+
+#tabela_pretraga {
+    background-color: darkslategrey;
+    border: solid 1px white;
+    border-radius: 10px;
+}
+
+a {
+    color: cadetblue;
+}
