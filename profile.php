@@ -2,6 +2,10 @@
 session_start();
 $id = $_SESSION['id'];
 
+if($_SESSION == NULL){
+    header('Location: login.php');
+}
+
 require 'connection.php';
 $sql = "SELECT * FROM users WHERE id= $id";
 $query = mysqli_query($conn, $sql);

@@ -2,6 +2,10 @@
 session_start();
 $id = $_SESSION['id'];
 
+if($id !== 1){
+    header('Location: login.php');
+}
+
 require 'connection.php';
 
 
