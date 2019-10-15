@@ -25,7 +25,7 @@
                 echo '<strong>Niste tacno ponovili lozinku!!</strong>';
             }else{
         /* Formiramo insert upit kojim prosledjene podatke upisujemo u bazu. */
-        $query = "INSERT INTO users VALUES ('$tip_programa','$pol', '$visina', '$tezina', '$ime', '$prezime', '$email', '$korisnickoIme', '$password', '$re_password', NULL, 'trener.png', NULL, '$datum_sada', NULL, NULL )";
+        $query = "INSERT INTO users VALUES ('$tip_programa','$pol', '$visina', '$tezina', '$ime', '$prezime', '$email', '$korisnickoIme', '$password', '$re_password', NULL, 'profile_images/trener.png', NULL, '$datum_sada', NULL, NULL )";
 
         /* Izvrsavamo upit. Rezultat izvrsavanja moze biti true ili false vrednost. */
         $result = mysqli_query($conn, $query);
