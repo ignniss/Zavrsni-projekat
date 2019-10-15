@@ -100,6 +100,7 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
     <div class="container">
         <div class="row">
             <div class="col-4">
+            <p class="font-weight-bold text-center mt-4">IZABERITE PROFILNU SLIKU</p>
                 <?php
                 if (isset($_POST['slika_btn'])) {
                     $slika = $_FILES['slika'];
@@ -112,7 +113,7 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
                 ?>
 
                 <form method="post" action="" enctype="multipart/form-data">
-                    <input class="btn btn-secondary mt-5" type="file" name="slika">
+                    <input class="btn btn-secondary mt-3" type="file" name="slika">
                     <input class="btn btn-info mt-3" type="submit" name="slika_btn" value="Upload">
                 </form>
 
