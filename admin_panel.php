@@ -2,10 +2,9 @@
 session_start();
 $id = $_SESSION['id'];
 
-if($id !== 1){
+if ($id != 1) {
     header('Location: login.php');
 }
-
 require 'connection.php';
 
 
@@ -245,17 +244,17 @@ $result5 = mysqli_fetch_all($query5, MYSQLI_ASSOC);
 
 
             <div id="desno" class="col-7">
-               
 
-                        </tbody>
-                    </table>
+
+                </tbody>
+                </table>
             </div>
 
         </div>
 
-<?php 
-mysqli_close($conn);
-?>
+        <?php
+        mysqli_close($conn);
+        ?>
 
     </div>
 
