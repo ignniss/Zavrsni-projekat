@@ -100,13 +100,21 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
     <div class="container">
         <div class="row">
             <div class="col-4">
+                <?php
+                if (isset($_POST['slika_btn'])) {
+                    $slika = $_FILES['slika'];
+                    $putanja = "profile_images/" .basename($slika['name']);
+                    $sql = "UPDATE users SET slike = '$putanja' WHERE id = '$id'";
+                    $query = mysqli_query($conn, $sql);
+                    move_uploaded_file($slika['tmp_name'], $putanja);
+                }
 
+                ?>
 
-                <form method="POST" action="getdata.php" enctype="multipart/form-data">
-                    <input type="file" name="myimage">
-                    <input type="submit" name="submit_image" value="Upload">
+                <form method="post" action="" enctype="multipart/form-data">
+                    <input class="btn btn-secondary mt-5" type="file" name="slika">
+                    <input class="btn btn-info mt-3" type="submit" name="slika_btn" value="Upload">
                 </form>
-
 
             </div>
             <div class="col-8">
@@ -222,7 +230,9 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
                     <p class="font-weight-bold">VISINA:</p> <input type="text" class="form-control" name="visina" value="<?php echo $result['visina'] ?>">
                     <p class="font-weight-bold">TELESNA MASA: </p><input type="text" class="form-control" name="tezina" value="<?php echo $result['tezina'] ?>">
 
-
+                    <?php
+                    mysqli_close($conn);
+                    ?>
                     <button type="submit " class="btn btn-success mb-4 mt-3">SAČUVAJ</button>
                 </form>
 
