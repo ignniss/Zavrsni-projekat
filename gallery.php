@@ -34,7 +34,7 @@ session_start();
         width: 100%;
         height: 100%;
         z-index: 9999;
-        background: url("http://smallenvelop.com/wp-content/uploads/2014/08/Preloader_11.gif") center no-repeat #fff;
+        background: url("Img/loader.gif") center no-repeat #fff;
     }
     </style>
 
