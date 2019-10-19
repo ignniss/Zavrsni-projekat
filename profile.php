@@ -48,6 +48,49 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="Script/profile.js"></script>
+    
+    <script>
+    $(function()
+        {
+            function timeChecker()
+            {
+                setInterval(function()
+                {
+                    var storedTimeStamp = sessionStorage.getItem("lastTimeStamp");
+                    timeCompare(storedTimeStamp); 
+                }, 5000);
+            }
+
+            function timeCompare(timeString)
+            {
+                var currentTime = new Date();
+                var pastTime    = new Date(timeString);
+                var timeDiff    = currentTime - pastTime;
+                var minPast     = Math.floor((timeDiff/60000)); 
+
+                if(minPast > 0){
+                    sessionStorage.removeItem("lastTimeStamp");
+                    window.location = "logout.php";
+                    return false;
+                }else{
+                    console.log(currentTime +"-"+ pastTime+"="+minPast+"min past");
+                }
+
+            }
+
+            $(document).mousemove(function()
+            {
+
+                var timeStamp = new  Date();
+                sessionStorage.setItem("lastTimeStamp", timeStamp);
+            });
+
+            timeChecker();
+        });
+    </script>
+
+
+    
 
     <title>profile</title>
 </head>
