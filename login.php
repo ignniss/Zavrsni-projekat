@@ -147,6 +147,7 @@ session_start();
                             placeholder="Korisnicko ime..." required>
                         <input type="password" class="form-control m-2" id="password2" name="password"
                             placeholder="Lozinka..." required>
+                        <small class="form-text text-muted m-2">Sifra mora sadrzati min 5 karaktera (1 veliko slovo, 1 malo, 1 cifru...)</small>
                         <input type="password" class="form-control m-2" id="re_password" name="re_password"
                             placeholder="Ponovljena lozinka..." required>
                         <button type="submit" class="btn btn-light m-2" id='' name='regBtn'><span>REGISTRUJ
