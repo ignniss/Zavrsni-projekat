@@ -1,8 +1,5 @@
 <?php
 
-
-
-
     if(isset($_POST['regBtn'])){
         require "connection.php";
         if (mysqli_connect_errno()) {
@@ -20,10 +17,85 @@
             $password = mysqli_real_escape_string($conn, $_POST['password']);
             $re_password = mysqli_real_escape_string($conn, $_POST['re_password']);
             $datum_sada=date('Y-m-d');
+            $greske=array();
 
-            if(strcmp($password, $re_password)!=0){
-                echo '<strong>Niste tacno ponovili lozinku!!</strong>';
-            }else{
+            /*funkcije za proveru unetih podataka*/
+            function validateTezina($a){
+                return $a>0;
+            }
+            function validateVisina($a){
+                return $a>0 && $a<250;
+            }
+            function validatePassword($a){
+                $duzina=strlen($a)>=5;
+                $digitCounter=0;
+                $upCounter=0;
+                for($i=0;$i<strlen($a);$i++){
+                    $c=$a[$i];
+                    if ($c >= '0' && $c <= '9') {
+                        $digitCounter++;
+                    }
+                    if($c>='A' && $c<='Z'){
+                        $upCounter++;
+                    }
+                }
+                return $duzina && ($digitCounter > 0) && ($upCounter > 0);
+            }
+            function validateKorisnickoIme($a){
+                require "connection.php";
+                $sql="SELECT * FROM users WHERE korisnicko_ime='$a'";
+                $query=mysqli_query($conn, $sql);
+                $result=mysqli_fetch_all($query, MYSQLI_ASSOC);
+                return count($result)==0;
+            }
+            function validateEmail($a){
+                require "connection.php";
+                $sql="SELECT * FROM users WHERE Email='$a'";
+                $query=mysqli_query($conn, $sql);
+                $result=mysqli_fetch_all($query, MYSQLI_ASSOC);
+                return count($result)==0;
+            }
+            function validateRepetedPassword($a,$b){
+                return strcmp($a,$b);
+            }
+            if(validateTezina($tezina)==false){
+                $greska="Tezina mora biti pozitivan broj!".'<br>';
+                array_push($greske,$greska);
+            }
+            if(validateVisina($visina)==false){
+                $greska="Visina mora biti pozitivna i manja od 250cm!".'<br>';
+                array_push($greske,$greska);
+            }
+            if(validateRepetedPassword($password, $re_password)!=0){
+                $greska="Niste lepo ponovili lozinku!".'<br>';
+                array_push($greske,$greska);
+            }
+            if(validatePassword($password)==false){
+                $greska="Sifra mora imati makar 5 karaktera, jedno veliko, jedno malo slovo i jednu cifru!".'<br>';
+                array_push($greske,$greska);
+            }
+            if (validateKorisnickoIme($korisnickoIme)==false){
+                $greska="Vec imamo korisnika sa istim korisnickim imenom! Unesite novo korisnicko ime!".'<br>';
+                array_push($greske,$greska);
+            }
+            if (validateEmail($email)==false){
+                $greska="Vec imamo korisnika sa istom email adresom! Unesite drugu email adresu!".'<br>';
+                array_push($greske,$greska);
+            }
+            
+            $filename = 'array.txt';
+            $string   = '';
+
+            foreach($greske as $key => $val) {
+	        $string .= "$key = $val\n";
+            }
+
+            file_put_contents($filename, $string);
+
+            
+        if(validateTezina($tezina) && validateVisina($visina) && validatePassword($password) 
+         && validateRepetedPassword($password, $re_password)==0 && validateKorisnickoIme($korisnickoIme)
+          && validateEmail($email)) {
         /* Formiramo insert upit kojim prosledjene podatke upisujemo u bazu. */
         $query = "INSERT INTO users VALUES ('$tip_programa','$pol', '$visina', '$tezina', '$ime', '$prezime', '$email', '$korisnickoIme', '$password', '$re_password', NULL, 'profile_images/trener.png', NULL, '$datum_sada', NULL, NULL )";
 
@@ -31,32 +103,21 @@
         $result = mysqli_query($conn, $query);
 
         if ($result == false) {
-            /* Ako je rezultat false, doslo je do greske. */
-            echo "<div class='alert alert-dismissible alert-danger'>";
-            echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
-
-            echo "<strong>Error with the query: </strong> " . mysqli_error($conn);
-            echo "<br>";
-            echo "<strong>Please try later! </strong>";
-            echo "</div>";
+            header('Location: neuspela_konekcija.php');
         } else {
-            /* Ako je rezultat true, unos je uspesan. */
-            // header("location: login.php");
-            echo "<div class='alert alert-dismissible alert-secondary'>";
-            echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
-
-            echo '<strong>Congrats! You have added a new user!</strong>';
-            echo "</div>";
-            
+            /* Korisnik se uspesno registrovao */
+            header('Location:login.php');
         }
-
+        }
+        else {
+            header('Location: error_handling.php');
+            
+            }
         /* Zatvaramo konekciju. */
         mysqli_close($conn);
-                    }
-
-            
-        }      
-    }else {
-        header("location: login.php");
+        }
+    }           
+      else {
+        header("location: registration.php");
     }          
 ?>
