@@ -60,9 +60,7 @@ $result5 = mysqli_fetch_all($query5, MYSQLI_ASSOC);
 </head>
 
 <body>
-    <form action="" method="get">
-        <button id="dugme_odjava" class="btn btn-warning odjava ml-3 mt-3">ODJAVI SE</button>
-    </form>
+    <a id="logout_btn" class="btn btn-warning mt-3 ml-4" href="logout.php">ODJAVA</a>
 
 
     <div class=" container">
