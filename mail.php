@@ -7,10 +7,11 @@ $telefon=$_POST['telefon'];
 $email=$_POST['email'];
 $naslov=$_POST['naslov'];
 $poruka=$_POST['poruka'];
+$admin='.\..\..\..\..\admin.txt';
 
 $mail = new PHPMailer;
 $mail->IsSMTP();
-$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+//$mail->SMTPDebug = SMTP::DEBUG_SERVER;
 $mail->Host = 'smtp.gmail.com';
 $mail->Port = 587;
 $mail->SMTPSecure = 'TLS';
@@ -18,7 +19,7 @@ $mail->SMTPAuth = true;
 //Username to use for SMTP authentication - use full email address for gmail
 $mail->Username = "aleksandrastamenkovic1004@gmail.com";
 //Password to use for SMTP authentication
-$mail->Password = "11alex1999";
+$mail->Password = file_get_contents($admin);
 //Set who the message is to be sent from
 $mail->setFrom($email,$ime);
 $mail->addAddress('aleksandrastamenkovic1004@gmail.com','Alex');
@@ -29,16 +30,17 @@ $mail->isHTML(true);
 $mail->Body= $poruka."<br> Telefon: ".$telefon."<br> Ime: ".$ime." <br> Email: ".$email; 
 
 
-//send the message, check for errors
-if (!$mail->send()) {
-    echo "Mailer Error: " . $mail->ErrorInfo;
-} else {
-    echo "Message sent!";
+if(isset($_POST['btnPosalji'])) {
+    if (!$mail->send()) {
+        echo "Ups! Doslo je do greske...Pokusajte ponovo.";
+    } else {
+        header('Location:poruka_poslata.php');
     //Section 2: IMAP
     //Uncomment these to save your message in the 'Sent Mail' folder.
     #if (save_mail($mail)) {
     #    echo "Message saved!";
     #}
+    }
 }
 //Section 2: IMAP
 //IMAP commands requires the PHP IMAP Extension, found at: https://php.net/manual/en/imap.setup.php
