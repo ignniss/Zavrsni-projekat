@@ -91,7 +91,7 @@ session_start();
                         <input type="password" class="form-control border-success m-2" id="pass" name="pass"
                             placeholder="Lozinka...">
                         <small id="passwordHelp" class="form-text text-muted m-2">Zaboravili ste lozinku? Kliknite <a
-                                href="#">ovde</a></small>
+                                href="oporavak_lozinke.php">ovde</a></small>
                         <button type="submit" class="btn btn-success m-2" id='prijava' name='btnLog'>PRIJAVI ME</button>
                     </div>
                 </form>
