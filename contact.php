@@ -141,24 +141,24 @@ session_start();
             <h3 class="mt-3">UKOLIKO IMATE NEKIH PITANJA MOZETE NAS KONTAKTIRATI </h3>
             <div class="form-group row mt-3">
                 <div class="col-sm-5 col-lg-4">
-                    <input type="text" class="form-control m-2" id="ime" placeholder="Ime i prezime*" name='ime'>
+                    <input type="text" class="form-control m-2" id="ime" placeholder="Ime i prezime*" name='ime' required>
                 </div>
                 <div class="col-sm-5 col-lg-4">
-                    <input type="text" class="form-control m-2" id="telefon" placeholder="Telefon*" name='telefon'>
+                    <input type="text" class="form-control m-2" id="telefon" placeholder="Telefon*" name='telefon' required>
                 </div>
             </div>
             
             <div class="form-group row mb-3">
                 <div class="col-sm-5 col-lg-4">
-                    <input type="email" class="form-control m-2" id="email" placeholder="Email*" name='email'>
+                    <input type="email" class="form-control m-2" id="email" placeholder="Email*" name='email' required>
                 </div>
                 <div class="col-sm-5 col-lg-4">
-                    <input type="text" class="form-control m-2" id="naslov" placeholder="Naslov poruke*" name='naslov'>
+                    <input type="text" class="form-control m-2" id="naslov" placeholder="Naslov poruke*" name='naslov' required>
                 </div>
             </div>
             
             <div class="form-group col-sm-10 col-lg-8">
-                <textarea class="form-control" id="poruka" rows="4" placeholder="Poruka*" name='poruka'></textarea>
+                <textarea class="form-control" id="poruka" rows="4" placeholder="Poruka*" name='poruka' required></textarea>
             </div>            
             <div class="col-sm-10  col-lg-8 ">
                 <button type="submit" id="posalji" class="btn btn-success" name='btnPosalji'>POSALJI</button>
