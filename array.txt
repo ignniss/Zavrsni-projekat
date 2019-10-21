@@ -1,0 +1,1 @@
+0 = Sifra mora imati makar 5 karaktera, jedno veliko, jedno malo slovo i jednu cifru!<br>

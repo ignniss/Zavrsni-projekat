@@ -58,7 +58,7 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
                 {
                     var storedTimeStamp = sessionStorage.getItem("lastTimeStamp");
                     timeCompare(storedTimeStamp); 
-                }, 5000);
+                }, 14000);
             }
 
             function timeCompare(timeString)
@@ -66,14 +66,14 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
                 var currentTime = new Date();
                 var pastTime    = new Date(timeString);
                 var timeDiff    = currentTime - pastTime;
-                var minPast     = Math.floor((timeDiff/60000)); 
+                var secPast     = Math.floor((timeDiff/1000)); 
 
-                if(minPast > 0){
+                if(timeDiff > 15000){
                     sessionStorage.removeItem("lastTimeStamp");
                     window.location = "logout.php";
                     return false;
                 }else{
-                    console.log(currentTime +"-"+ pastTime+"="+minPast+"min past");
+                    console.log(currentTime +"-"+ pastTime+"="+secPast+" sec past");
                 }
 
             }
