@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php
+session_start();
+$sesija = 0;
+if($_SESSION != NULL)
+$sesija = 1;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,38 +22,66 @@
     </body>
 
     <script>
-        $(function() {
-            function timeChecker() {
-                setInterval(function() {
-                    var storedTimeStamp = sessionStorage.getItem("lastTimeStamp");
-                    timeCompare(storedTimeStamp);
-                }, 3000);
-            }
+    $(function()
+    
+{   
+    var sesija = '<?php echo $sesija; ?>';
+    function timeChecker()
+    {    
 
-            function timeCompare(timeString) {
-                var currentTime = new Date();
-                var pastTime = new Date(timeString);
-                var timeDiff = currentTime - pastTime;
-                var secPast = Math.floor((timeDiff / 1000));
+        setInterval(function()
+        {
+            var storedTimeStamp = sessionStorage.getItem("lastTimeStamp");
+            timeCompare(storedTimeStamp); 
+        }, 3000);
+    }
 
-                if (timeDiff > 15000) {
-                    sessionStorage.removeItem("lastTimeStamp");
-                    window.location = "logout.php";
-                    return false;
-                } else {
-                    console.log(currentTime + "-" + pastTime + "=" + secPast + " sec past");
-                }
+    function timeCompare(timeString)
+    {
+        var currentTime = new Date();
+        var pastTime    = new Date(timeString);
+        var timeDiff    = currentTime - pastTime;
+        var secPast     = Math.floor((timeDiff/1000)); 
 
-            }
+        if(timeDiff > 15000){
+            sessionStorage.removeItem("lastTimeStamp");
+            window.location = "logout.php";
+            return false;
+        }else{
+            console.log(currentTime +"-"+ pastTime+"="+secPast+" sec past");
+        }
 
-            $(document).mousemove(function() {
+    }
 
-                var timeStamp = new Date();
-                sessionStorage.setItem("lastTimeStamp", timeStamp);
-            });
+    $(document).mousemove(function()
+    {
 
-            timeChecker();
-        });
+        var timeStamp = new  Date();
+        sessionStorage.setItem("lastTimeStamp", timeStamp);
+    });
+
+    $(document).keydown(function()
+    {
+
+        var timeStamp = new  Date();
+        sessionStorage.setItem("lastTimeStamp", timeStamp);
+    });
+
+    $(document).mousedown(function()
+    {
+
+        var timeStamp = new  Date();
+        sessionStorage.setItem("lastTimeStamp", timeStamp);
+    });
+
+ console.log(sesija);
+ if(sesija == 1){
+        timeChecker();
+ }
+
+    
+    
+});
     </script>
 
 

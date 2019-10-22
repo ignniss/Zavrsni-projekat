@@ -1,5 +1,8 @@
 <?php
 session_start();
+$sesija = 0;
+if($_SESSION != NULL)
+$sesija = 1;
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +30,9 @@ session_start();
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>  
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <!-- <script src="Script/session.js"></script>   -->
+  
     <style>
     
     .se-pre-con {
@@ -41,44 +46,68 @@ session_start();
     }
     </style>
 
+
 <script>
     $(function()
+    
+{   
+    var sesija = '<?php echo $sesija; ?>';
+    function timeChecker()
+    {    
+
+        setInterval(function()
         {
-            function timeChecker()
-            {
-                setInterval(function()
-                {
-                    var storedTimeStamp = sessionStorage.getItem("lastTimeStamp");
-                    timeCompare(storedTimeStamp); 
-                }, 3000);
-            }
+            var storedTimeStamp = sessionStorage.getItem("lastTimeStamp");
+            timeCompare(storedTimeStamp); 
+        }, 3000);
+    }
 
-            function timeCompare(timeString)
-            {
-                var currentTime = new Date();
-                var pastTime    = new Date(timeString);
-                var timeDiff    = currentTime - pastTime;
-                var secPast     = Math.floor((timeDiff/1000)); 
+    function timeCompare(timeString)
+    {
+        var currentTime = new Date();
+        var pastTime    = new Date(timeString);
+        var timeDiff    = currentTime - pastTime;
+        var secPast     = Math.floor((timeDiff/1000)); 
 
-                if(timeDiff > 15000){
-                    sessionStorage.removeItem("lastTimeStamp");
-                    window.location = "logout.php";
-                    return false;
-                }else{
-                    console.log(currentTime +"-"+ pastTime+"="+secPast+" sec past");
-                }
+        if(timeDiff > 15000){
+            sessionStorage.removeItem("lastTimeStamp");
+            window.location = "logout.php";
+            return false;
+        }else{
+            console.log(currentTime +"-"+ pastTime+"="+secPast+" sec past");
+        }
 
-            }
+    }
 
-            $(document).mousemove(function()
-            {
+    $(document).mousemove(function()
+    {
 
-                var timeStamp = new  Date();
-                sessionStorage.setItem("lastTimeStamp", timeStamp);
-            });
+        var timeStamp = new  Date();
+        sessionStorage.setItem("lastTimeStamp", timeStamp);
+    });
 
-            timeChecker();
-        });
+    $(document).keydown(function()
+    {
+
+        var timeStamp = new  Date();
+        sessionStorage.setItem("lastTimeStamp", timeStamp);
+    });
+
+    $(document).mousedown(function()
+    {
+
+        var timeStamp = new  Date();
+        sessionStorage.setItem("lastTimeStamp", timeStamp);
+    });
+
+ console.log(sesija);
+ if(sesija == 1){
+        timeChecker();
+ }
+
+    
+    
+});
     </script>
 
    

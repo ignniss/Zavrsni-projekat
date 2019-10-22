@@ -47,50 +47,9 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="Script/profile.js"></script>
-    
-    <script>
-    $(function()
-        {
-            function timeChecker()
-            {
-                setInterval(function()
-                {
-                    var storedTimeStamp = sessionStorage.getItem("lastTimeStamp");
-                    timeCompare(storedTimeStamp); 
-                }, 14000);
-            }
+    <script src="Script/profile.js"></script>   
+    <script src="Script/session.js"></script>   
 
-            function timeCompare(timeString)
-            {
-                var currentTime = new Date();
-                var pastTime    = new Date(timeString);
-                var timeDiff    = currentTime - pastTime;
-                var secPast     = Math.floor((timeDiff/1000)); 
-
-                if(timeDiff > 15000){
-                    sessionStorage.removeItem("lastTimeStamp");
-                    window.location = "logout.php";
-                    return false;
-                }else{
-                    console.log(currentTime +"-"+ pastTime+"="+secPast+" sec past");
-                }
-
-            }
-
-            $(document).mousemove(function()
-            {
-
-                var timeStamp = new  Date();
-                sessionStorage.setItem("lastTimeStamp", timeStamp);
-            });
-
-            timeChecker();
-        });
-    </script>
-
-
-    
 
     <title>profile</title>
 </head>
