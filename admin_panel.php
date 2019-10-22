@@ -105,7 +105,6 @@ $result5 = mysqli_fetch_all($query5, MYSQLI_ASSOC);
             </div>
 
 
-
             <div class="card col-3 text-light bg-dark text-center mt-3">
 
                 BROJ POSETA DANAS
@@ -215,7 +214,7 @@ $result5 = mysqli_fetch_all($query5, MYSQLI_ASSOC);
                                 echo '<tr><td>' . $row['id'] . '</td><td> ' . $row['ime'] . '</td><td> ' . $row['prezime'] . '</td><td> ' . date_format(date_create($row["uplata"]), "d. m. Y.") . '</td><td>';
 
                                 ?>
-                                <a href="update_uplate.php?id=<?php echo $row['id'] ?>">UPLATA</a>
+                                <a class="btn btn-success" href="update_uplate.php?id=<?php echo $row['id'] ?>">UPLATA</a>
                             <?php
                                 echo '</td></tr> ';
 

@@ -3,7 +3,7 @@
     if(isset($_POST['regBtn'])){
         require "connection.php";
         if (mysqli_connect_errno()) {
-            echo 'There is problem with connection: ' . mysqli_connect_error();
+            echo 'There is a problem with connection: ' . mysqli_connect_error();
         } else {
 
             $tip_programa = mysqli_real_escape_string($conn, $_POST['program']);
@@ -50,7 +50,7 @@
             }
             function validateEmail($a){
                 require "connection.php";
-                $sql="SELECT * FROM users WHERE Email='$a'";
+                $sql="SELECT * FROM users WHERE email='$a'";
                 $query=mysqli_query($conn, $sql);
                 $result=mysqli_fetch_all($query, MYSQLI_ASSOC);
                 return count($result)==0;
@@ -97,7 +97,8 @@
          && validateRepetedPassword($password, $re_password)==0 && validateKorisnickoIme($korisnickoIme)
           && validateEmail($email)) {
         /* Formiramo insert upit kojim prosledjene podatke upisujemo u bazu. */
-        $query = "INSERT INTO users VALUES ('$tip_programa','$pol', '$visina', '$tezina', '$ime', '$prezime', '$email', '$korisnickoIme', '$password', '$re_password', NULL, 'profile_images/trener.png', NULL, '$datum_sada', NULL, NULL )";
+        $password = password_hash($password, PASSWORD_BCRYPT);
+        $query = "INSERT INTO users VALUES ('$tip_programa','$pol', '$visina', '$tezina', '$ime', '$prezime', '$email', '$korisnickoIme', '$password',  NULL, 'profile_images/trener.png', NULL, '$datum_sada', NULL, NULL )";
 
         /* Izvrsavamo upit. Rezultat izvrsavanja moze biti true ili false vrednost. */
         $result = mysqli_query($conn, $query);

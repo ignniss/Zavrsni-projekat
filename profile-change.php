@@ -19,7 +19,7 @@ $datum_sada = date_format(date_create($datum3), 'd. m. Y.');
 $korisnicko_ime = $result['korisnicko_ime'];
 $program_odrasli = $result['program_odrasli'];
 $rok = 30 - date_diff(date_create($datum3), date_create($datum2))->format("%a");
-$imejl = $result['Email'];
+$imejl = $result['email'];
 $slika = $result['slike'];
 $bmi = round($tezina / pow($visina / 100, 2), 2);
 
@@ -154,7 +154,7 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
 
                 <form action="profile-update.php" method="post">
 
-                    <p class="font-weight-bold">IMEJL ADRESA:</p> <input type="email" class="form-control" name="email" value="<?php echo $result['Email'] ?>">
+                    <p class="font-weight-bold">IMEJL ADRESA:</p> <input type="email" class="form-control" name="email" value="<?php echo $result['email'] ?>">
 
                     <p class="font-weight-bold">VRSTA PROGRAMA:</p>
                     <?php
@@ -197,6 +197,7 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
                     </select>
                     <p class="font-weight-bold">PROGRAM ZA ODRASLE: </p>
                     <select name="program_odrasli" id="program_odrasli" class='form-control'>
+                        <option value="NISTE ODABRALI" selected="selected">--------</option>
                         <option value="cross training">cross training</option>
                         <option value="cross conditioning">cross conditioning</option>
                         <option value="cross box">cross box</option>

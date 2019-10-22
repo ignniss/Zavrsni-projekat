@@ -17,16 +17,19 @@ if(isset($_POST['btnLog'])){
     $korisnickoIme = $_POST['korisnicko'];
     $password = $_POST['pass'];
 
-    $sql = "SELECT id FROM users WHERE korisnicko_ime = '$korisnickoIme' AND sifra = '$password'";
+    $sql = "SELECT id, sifra FROM users WHERE korisnicko_ime = '$korisnickoIme'";
     $query = mysqli_query($conn, $sql);
-    $id = mysqli_fetch_assoc($query)['id'];
-        if($id){
-            $_SESSION['id'] = $id;       
-            header("location: profile.php");
-            } else{
-        $sql2 = "SELECT Email FROM users WHERE korisnicko_ime = '$korisnickoIme'";
+    $result = mysqli_fetch_assoc($query);
+    $hashed_password = $result['sifra'];
+    
+    if(password_verify($password, $hashed_password)){
+        $_SESSION['id'] = $result['id'];
+        
+        header("location: profile.php");
+    }else{
+        $sql2 = "SELECT email FROM users WHERE korisnicko_ime = '$korisnickoIme'";
         $query = mysqli_query($conn, $sql2);
-        $email = mysqli_fetch_assoc($query)['Email'];
+        $email = mysqli_fetch_assoc($query)['email'];
         $nova_sifra=generisi_pomocnu_lozinku();
         $filename='nova_lozinka.txt';
         $ispis=$nova_sifra."\n".$email."\n".$korisnickoIme;
@@ -37,6 +40,7 @@ if(isset($_POST['btnLog'])){
         }
        
 }
+
 
 ?>
 

@@ -89,7 +89,7 @@ session_start();
     $email=$lines[1];
     $korisnik=$lines[2];
 
-    require 'C:\xampp\htdocs\test\Zavrsni-projekat-master\phpmailer\PHPMailerAutoload.php';
+    require 'phpmailer\PHPMailerAutoload.php';
 
 $mail = new PHPMailer;
 $admin='.\..\..\..\..\admin.txt';

@@ -22,7 +22,7 @@ $datum_sada = date_format(date_create($datum3), 'd. m. Y.');
 $korisnicko_ime = $result['korisnicko_ime'];
 $program_odrasli = $result['program_odrasli'];
 $rok = 30 - date_diff(date_create($datum3), date_create($datum2))->format("%a");
-$imejl = $result['Email'];
+$imejl = $result['email'];
 $slika = $result['slike'];
 $bmi = round($tezina / pow($visina / 100, 2), 2);
 
@@ -269,7 +269,7 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
 
 
                 ?>
-                <p class="font-weight-bold">POSLEDNJA POSETA:
+                <p class="admin font-weight-bold">POSLEDNJA POSETA:
 
                     <?php
                     if ($datum_posete == NULL || $datum_posete == '') {
@@ -278,8 +278,8 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
                         echo '<span class="text-success font-weight-bold text-light">' . date_format(date_create($datum_posete), 'd. m. Y.') . '</span>'  ?></p>
 
 
-                <p class="font-weight-bold">UKUPAN BROJ POSETA: <?php echo '<span class="text-success font-weight-bold text-light">' .  $broj_poseta .  '</span>'  ?></p>
-                <p class="font-weight-bold">BROJ POSETA TEKUĆEG MESECA: <?php echo '<span class="text-success font-weight-bold text-light">' . $broj_poseta_mesec.   '</span>'  ?></p>
+                <p class="admin font-weight-bold">UKUPAN BROJ POSETA: <?php echo '<span class="text-success font-weight-bold text-light">' .  $broj_poseta .  '</span>'  ?></p>
+                <p class="admin font-weight-bold">BROJ POSETA TEKUĆEG MESECA: <?php echo '<span class="text-success font-weight-bold text-light">' . $broj_poseta_mesec.   '</span>'  ?></p>
 
 
 
