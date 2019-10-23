@@ -111,7 +111,7 @@ $mail->SMTPSecure = "tls";
 $mail->Port = 587;                                   
 
 $mail->From = "aleksandrastamenkovic1004@gmail.com";
-$mail->FromName = "AleksandraStamenkovic";
+$mail->FromName = "Ozon Cross Gym";";
 
 $mail->addAddress($email, $korisnik);
 
