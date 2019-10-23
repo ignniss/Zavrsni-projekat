@@ -11,23 +11,24 @@ $nova_lozinka = $_POST['nova_lozinka'];
 $re_nova_lozinka = $_POST['re_nova_lozinka'];
 $program_odrasli = $_POST['program_odrasli'];
 
-function validatePassword($a){
-    $duzina=strlen($a)>=5;
-    $digitCounter=0;
-    $upCounter=0;
-    for($i=0;$i<strlen($a);$i++){
-        $c=$a[$i];
+function validatePassword($a)
+{
+    $duzina = strlen($a) >= 5;
+    $digitCounter = 0;
+    $upCounter = 0;
+    for ($i = 0; $i < strlen($a); $i++) {
+        $c = $a[$i];
         if ($c >= '0' && $c <= '9') {
             $digitCounter++;
         }
-        if($c>='A' && $c<='Z'){
+        if ($c >= 'A' && $c <= 'Z') {
             $upCounter++;
         }
     }
     return $duzina && ($digitCounter > 0) && ($upCounter > 0);
 }
 
-if(validatePassword($nova_lozinka)===false){
+if (validatePassword($nova_lozinka) === false) {
     echo '<script>';
     echo 'alert("LOZINKA NE ZADOVOLJAVA USLOVE");';
     echo 'window.location= "profile.php";';
@@ -35,7 +36,7 @@ if(validatePassword($nova_lozinka)===false){
 }
 
 
-if ($nova_lozinka == $re_nova_lozinka ) {
+if ($nova_lozinka === $re_nova_lozinka) {
     $nova_lozinka = password_hash($nova_lozinka, PASSWORD_BCRYPT);
     $sql = "UPDATE users SET tip_programa='$program', pol='$pol', visina='$visina', tezina='$tezina', email='$email', sifra ='$nova_lozinka' ,program_odrasli='$program_odrasli' WHERE id=$id";
     $query = mysqli_query($conn, $sql);

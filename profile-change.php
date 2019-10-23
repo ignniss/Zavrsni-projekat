@@ -20,6 +20,7 @@ $korisnicko_ime = $result['korisnicko_ime'];
 $program_odrasli = $result['program_odrasli'];
 $rok = 30 - date_diff(date_create($datum3), date_create($datum2))->format("%a");
 $imejl = $result['email'];
+$lozinka = $result['sifra'];
 $slika = $result['slike'];
 $bmi = round($tezina / pow($visina / 100, 2), 2);
 
@@ -156,6 +157,11 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
 
                     <p class="font-weight-bold">IMEJL ADRESA:</p> <input type="email" class="form-control" name="email" value="<?php echo $result['email'] ?>">
 
+                    <p class="font-weight-bold">NOVA LOZINKA:</p>
+                    <small class="font-weight-bold text-danger">5 KARAKTERA, 1 VELIKO SLOVO, 1 MALO, 1 CIFRA:</small>
+                    <input type="password" class="form-control" name="nova_lozinka" value="<?php echo $lozinka ?>">
+                    <p class="font-weight-bold">PONOVITE LOZINKU:</p> <input type="password" class="form-control" name="re_nova_lozinka" value="<?php echo $lozinka ?>">
+
                     <p class="font-weight-bold">VRSTA PROGRAMA:</p>
                     <?php
                     function fja1($a, $x, $y)
@@ -197,10 +203,10 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
                     </select>
                     <p class="font-weight-bold">PROGRAM ZA ODRASLE: </p>
                     <select name="program_odrasli" id="program_odrasli" class='form-control'>
-                        <option value="NISTE ODABRALI" selected="selected">--------</option>
-                        <option value="cross training">cross training</option>
-                        <option value="cross conditioning">cross conditioning</option>
-                        <option value="cross box">cross box</option>
+                        <option value="NISTE IZABRALI" selected="selected">--------</option>
+                        <option value="cross_training">cross training</option>
+                        <option value="cross_conditioning">cross conditioning</option>
+                        <option value="cross_box">cross box</option>
                         <option value="zumba">zumba</option>
                         <option value="pilates">pilates</option>
                         <option value="joga">joga</option>
