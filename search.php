@@ -26,7 +26,6 @@
             <- NAZAD</a> <?php
                             require 'connection.php';
                             $url = $_SERVER['REQUEST_URI'];
-
                             $pojam = $_GET['pretraga'];
                             $sql = "SELECT * FROM users WHERE ime = '$pojam' OR prezime = '$pojam' OR tip_programa = '$pojam' OR pol = '$pojam' OR ocena = '$pojam' OR program_odrasli = '$pojam'";
                             $query = mysqli_query($conn, $sql);
@@ -54,18 +53,15 @@
 
                     <tbody>
                         <?php
-
-
                         foreach ($result as $row) {
                             $datum_uplate = ($row["uplata"] === NULL ? NULL : date_format(date_create($row["uplata"]), "d. m. Y."));
-
                             echo '<tr><td>' .  $row['id'] . '</td><td>'  .  $row['ime'] . '</td><td>' .  $row['prezime'] . '</td><td>' . $datum_uplate . '</td><td>' .  date_format(date_create($row["registrovanje"]), "d. m. Y.") . '</td><td>' .  $row['tip_programa'] . '</td><td>';
                             ?>
                             <a href="profile-change_admin?id=<?php echo $row['id'] ?>">PROFIL</a>
                             <?php
                                 echo '</td><td>';
                                 ?>
-                            <a id="delete_link" href="profile_delete.php?id=<?php echo $row['id'] ?>">
+                            <a class="delete_link" href="profile_delete.php?id=<?php echo $row['id'] ?>">
                                 <p class="btn btn-danger brisanje"> IZBRIŠI</p>
                             </a>
 
@@ -78,7 +74,6 @@
                         <?php
                             echo '</td></tr> ';
                         }
-
                         mysqli_close($conn);
                         ?>
 
