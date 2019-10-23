@@ -34,6 +34,7 @@ if(isset($_POST['btnLog'])){
         $filename='nova_lozinka.txt';
         $ispis=$nova_sifra."\n".$email."\n".$korisnickoIme;
         file_put_contents($filename,$ispis);
+        $nova_sifra=password_hash($nova_sifra,PASSWORD_BCRYPT);
         $sql3="UPDATE users SET sifra='$nova_sifra' WHERE korisnicko_ime='$korisnickoIme'";
         $query=mysqli_query($conn, $sql3);
         header('Location:oporavak_lozinke.php');
