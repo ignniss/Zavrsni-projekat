@@ -1,6 +1,6 @@
 <?php
 
-require 'C:\xampp\htdocs\test\Zavrsni-projekat-master\phpmailer\PHPMailerAutoload.php';
+require 'phpmailer\PHPMailerAutoload.php';
 
 $ime=$_POST['ime'];
 $telefon=$_POST['telefon'];
