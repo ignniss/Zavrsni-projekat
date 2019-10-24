@@ -116,13 +116,13 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
 
 
         <div class="row">
-            <div class="col-4">
+            <div class="col-sm-4 text-center">
 
-                <img class="mt-4" id="profilna" src="<?php echo $slika ?>" alt="">
+                <img class="mt-4 " id="profilna" src="<?php echo $slika ?>" alt="">
 
             </div>
 
-            <div class="col-8">
+            <div class="col-sm-8">
                 <p id="dobrodosli" class="font-weight-bold display-4 text-center text-light">PROFIL KORISNIKA</p>
 
                 <button id="admin_btn" class="btn btn-success form-control ">ADMIN PANEL</button>

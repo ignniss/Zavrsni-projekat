@@ -100,17 +100,16 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-4">
-            <p class="font-weight-bold text-center mt-4">IZABERITE PROFILNU SLIKU</p>
+            <div class="col-md-4">
+                <p class="font-weight-bold text-center mt-4">IZABERITE PROFILNU SLIKU</p>
                 <?php
                 if (isset($_POST['slika_btn'])) {
                     $slika = $_FILES['slika'];
-                    $putanja = "profile_images/" .basename($slika['name']);
+                    $putanja = "profile_images/" . basename($slika['name']);
                     $sql = "UPDATE users SET slike = '$putanja' WHERE id = '$id'";
                     $query = mysqli_query($conn, $sql);
                     move_uploaded_file($slika['tmp_name'], $putanja);
                 }
-
                 ?>
 
                 <form method="post" action="" enctype="multipart/form-data">
@@ -118,8 +117,65 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
                     <input class="btn btn-info mt-3" type="submit" name="slika_btn" value="Upload">
                 </form>
 
+                <hr>
+
+                <form action="" method="post">
+
+                    <p class="font-weight-bold mt-2">NOVA LOZINKA:</p>
+                    <small class="font-weight-bold text-warning">5 KARAKTERA, 1 VELIKO SLOVO, 1 MALO, 1 CIFRA</small>
+                    <input type="password" class="form-control" name="nova_lozinka" placeholder="unesite novu lozinku">
+                    <p class="font-weight-bold mt-2">PONOVITE LOZINKU:</p>
+                    <input type="password" class="form-control" name="re_nova_lozinka" placeholder="ponovite lozinku">
+
+                    <button class="btn btn-warning mt-2" name="password_btn">IZMENI</button>
+
+                </form>
+
+                <?php
+                if (isset($_POST['password_btn'])) {
+                    $nova_lozinka = $_POST['nova_lozinka'];
+                    $re_nova_lozinka = $_POST['re_nova_lozinka'];
+                    function validatePassword($a)
+                    {
+                        $duzina = strlen($a) >= 5;
+                        $digitCounter = 0;
+                        $upCounter = 0;
+                        for ($i = 0; $i < strlen($a); $i++) {
+                            $c = $a[$i];
+                            if ($c >= '0' && $c <= '9') {
+                                $digitCounter++;
+                            }
+                            if ($c >= 'A' && $c <= 'Z') {
+                                $upCounter++;
+                            }
+                        }
+                        return $duzina && ($digitCounter > 0) && ($upCounter > 0);
+                    }
+
+                    if (validatePassword($nova_lozinka) === false) {
+                        echo '<script>';
+                        echo 'alert("LOZINKA NE ZADOVOLJAVA USLOVE");';
+                        echo 'window.location= "profile.php";';
+                        echo '</script>';
+                    }
+
+
+                    if ($nova_lozinka === $re_nova_lozinka) {
+                        $nova_lozinka = password_hash($nova_lozinka, PASSWORD_BCRYPT);
+                        $sql = "UPDATE users SET sifra = '$nova_lozinka' WHERE id=$id";
+                        $query = mysqli_query($conn, $sql);
+                    } else {
+                        echo '<script>';
+                        echo 'alert("LOZINKA I PONOVLJENA LOZINKA SE NE PODUDARAJU");';
+                        echo 'window.location= "profile.php";';
+                        echo '</script>';
+                    }
+                }
+                ?>
+
+
             </div>
-            <div class="col-8">
+            <div class="col-md-8">
                 <p id="dobrodosli" class="font-weight-bold display-4 text-center text-light">PROFIL KORISNIKA</p>
 
                 <p class="font-weight-bold">IME: <?php echo '<span class="text-success font-weight-bold text-light">' . $result['ime'] . '</span>'  ?> </p>
@@ -157,10 +213,6 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
 
                     <p class="font-weight-bold">IMEJL ADRESA:</p> <input type="email" class="form-control" name="email" value="<?php echo $result['email'] ?>">
 
-                    <p class="font-weight-bold">NOVA LOZINKA:</p>
-                    <small class="font-weight-bold text-danger">5 KARAKTERA, 1 VELIKO SLOVO, 1 MALO, 1 CIFRA:</small>
-                    <input type="password" class="form-control" name="nova_lozinka" value="<?php echo $lozinka ?>">
-                    <p class="font-weight-bold">PONOVITE LOZINKU:</p> <input type="password" class="form-control" name="re_nova_lozinka" value="<?php echo $lozinka ?>">
 
                     <p class="font-weight-bold">VRSTA PROGRAMA:</p>
                     <?php
@@ -241,7 +293,8 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
                     <?php
                     mysqli_close($conn);
                     ?>
-                    <button type="submit " class="btn btn-success mb-4 mt-3">SAČUVAJ</button>
+                    <button type="submit" class="btn btn-warning mb-4 mt-3">SAČUVAJ</button>
+                    <a class="btn btn-info mb-4 mt-3" href="profile.php">ODUSTANI</a>
                 </form>
 
 
