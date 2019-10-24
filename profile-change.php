@@ -160,7 +160,7 @@ $bmi = round($tezina / pow($visina / 100, 2), 2);
                     }
 
 
-                    if ($nova_lozinka === $re_nova_lozinka) {
+                    if (validatePassword($nova_lozinka)==true && $nova_lozinka === $re_nova_lozinka) {
                         $nova_lozinka = password_hash($nova_lozinka, PASSWORD_BCRYPT);
                         $sql = "UPDATE users SET sifra = '$nova_lozinka' WHERE id=$id";
                         $query = mysqli_query($conn, $sql);
