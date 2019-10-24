@@ -87,11 +87,9 @@ session_start();
                             <h3>PRIJAVI SE</h3>
                         </div>
                         <input type="text" class="form-control border-success m-2" id="korisnicko" name="korisnicko"
-                            placeholder="Korisnicko ime...">
+                            placeholder="Korisnicko ime..." required>
                         <input type="password" class="form-control border-success m-2" id="pass" name="pass"
-                            placeholder="Lozinka...">
-                        <small id="passwordHelp" class="form-text text-muted m-2">Zaboravili ste lozinku? Kliknite <a
-                                href="oporavak_lozinke.php">ovde</a></small>
+                            placeholder="Lozinka..." required>
                         <button type="submit" class="btn btn-success m-2" id='prijava' name='btnLog'>PRIJAVI ME</button>
                     </div>
                 </form>
