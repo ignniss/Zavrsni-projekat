@@ -80,7 +80,6 @@ session_start();
 
 <?php
     echo "<p style='color:black;font-weight:bold;text-align:center'>Ups! Izgleda da ste zaboravili lozinku!<br>
-    Ili je pogresno uneto korisnicko ime!<br>
     Proverite unete podatke!<br>
     Da li zelite da Vam prosledimo pomocnu lozinku na email adresu?</p>";  
     
@@ -130,7 +129,7 @@ $mail->AltBody = "This is the plain text version of the email content";
     <?php
     if(isset($_POST['btnNovaLoz'])) {
         if(!$mail->send()) {
-            echo "<strong>Doslo je do greske! Ne postoji korisnik sa unetim korisnickim imenom!</strong>";
+            echo "<strong>Doslo je do greske! Molim pokusajte ponovo!</strong>";
         } else {
             echo "<strong>Pomocna lozinka je poslata na Vasu email adresu.</strong>";
         }
