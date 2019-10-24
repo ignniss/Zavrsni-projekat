@@ -1,8 +1,6 @@
 $(document).ready(() => {
     let image = $('<img>');
     let span1 = $('<span>&times<span>');
-    let span2 = $('<span>&#10094<span>');
-    let span3 = $('<span>&#10095<span>');
     let duzina = $('.gallery').length;
 
 
@@ -14,7 +12,7 @@ $(document).ready(() => {
     };
 
     function funkcija2() {
-        $('#slika').append(span1).append(span2).append(span3).append(image);
+        $('#slika').append(span1).append(image);
         span1.attr('id', 'zatvori');
         span1.css({
             'color': 'white',
@@ -24,22 +22,7 @@ $(document).ready(() => {
             'font-size': '40px',
             'cursor': 'pointer'
         })
-        span2.css({
-            'color': 'white',
-            'position': 'relative',
-            'top': '50%',
-            'left': '-8%',
-            'font-size': '40px',
-            'cursor': 'pointer'
-        })
-        span3.css({
-            'color': 'white',
-            'position': 'relative',
-            'top': '50%',
-            'left': '100%',
-            'font-size': '40px',
-            'cursor': 'pointer'
-        })
+
 
     }
 
