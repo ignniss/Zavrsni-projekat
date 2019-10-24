@@ -107,7 +107,10 @@
             header('Location: neuspela_konekcija.php');
         } else {
             /* Korisnik se uspesno registrovao */
-            header('Location:login.php');
+            echo '<script>';
+            echo 'alert("Uspesno ste se registrovali!");';
+            echo 'window.location= "login.php";';
+            echo '</script>';
         }
         }
         else {
