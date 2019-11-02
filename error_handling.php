@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,18 +64,13 @@
     </nav>
 <?php
 
-$filename = 'array.txt';
-$lines    = file($filename);
-$data     = array();
-
-foreach($lines as $line) {
-	list($key, $val) = explode('=', $line);
-	$data[trim($key)] = trim($val);
+$greske=$_SESSION['greske'];
+foreach ($greske as $greska) {
+    echo '<p class="text-dark text-center font-weight-bold">'.$greska.'</p>';
 }
 
-foreach ($data as  $value) {
-    echo "<p style='color:black;font-weight:bold;text-align:center'>$value</p>";
-}
+session_destroy();
+
 
 ?>
 

@@ -6,7 +6,7 @@ $(function()
                 {
                     var storedTimeStamp = sessionStorage.getItem("lastTimeStamp");
                     timeCompare(storedTimeStamp); 
-                }, 3000);
+                }, 14000);
             }
 
             function timeCompare(timeString)
@@ -28,10 +28,21 @@ $(function()
 
             $(document).mousemove(function()
             {
-
                 var timeStamp = new  Date();
                 sessionStorage.setItem("lastTimeStamp", timeStamp);
             });
 
+            $(document).keydown(function()
+            {
+                var timeStamp = new  Date();
+                sessionStorage.setItem("lastTimeStamp", timeStamp);
+            });
+        
+            $(document).mousedown(function()
+            {
+                var timeStamp = new  Date();
+                sessionStorage.setItem("lastTimeStamp", timeStamp);
+            });
+            
             timeChecker();
         });

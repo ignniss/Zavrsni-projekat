@@ -1,9 +1,13 @@
 <?php
+session_start();
+?>
+<?php
 
     if(isset($_POST['regBtn'])){
         require "connection.php";
         if (mysqli_connect_errno()) {
-            echo 'There is a problem with connection: ' . mysqli_connect_error();
+            header('Location:neuspela_konekcija.php');
+            //echo 'There is a problem with connection: ' . mysqli_connect_error();
         } else {
 
             $tip_programa = mysqli_real_escape_string($conn, $_POST['program']);
@@ -19,6 +23,7 @@
             $datum_sada=date('Y-m-d');
             $greske=array();
 
+            
             /*funkcije za proveru unetih podataka*/
             function validateTezina($a){
                 return $a>0;
@@ -83,7 +88,7 @@
                 array_push($greske,$greska);
             }
             
-            $filename = 'array.txt';
+          /*  $filename = 'array.txt';
             $string   = '';
 
             foreach($greske as $key => $val) {
@@ -91,7 +96,7 @@
             }
 
             file_put_contents($filename, $string);
-
+*/
             
         if(validateTezina($tezina) && validateVisina($visina) && validatePassword($password) 
          && validateRepetedPassword($password, $re_password)==0 && validateKorisnickoIme($korisnickoIme)
@@ -113,11 +118,10 @@
             echo '</script>';
         }
         }
-        else {
-            header('Location: error_handling.php');
-            
-            }
-        /* Zatvaramo konekciju. */
+        else { 
+            $_SESSION['greske']=$greske; 
+            header('Location:error_handling2.php');
+        } /* Zatvaramo konekciju. */
         mysqli_close($conn);
         }
     }           
